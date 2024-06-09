@@ -196,7 +196,41 @@ const div = document.querySelector("#quiz");
 // }
 
 
-
-const getQuestions async = () 
-
-
+// // Making func to get questions from api
+// const  getQuestions = async ()=>{
+//     // Using try-catch method to get data
+//     try{
+//         // Using fetch method
+//         const data = await fetch('https://the-trivia-api.com/v2/questions');
+//         // Declare response and apply .json on data to convert into an array
+//         const response = await data.json();
+//         // Log the response to check
+//         console.log(response);
+//         // Declare questions and using map method on response to get only questions and index of questions
+//         const questions = response.map((item,index)=>{
+//             return `Question ${index}) ${item.question.text}<br>`
+//         })
+//         // Log the questions to check
+//         console.log(questions);
+//         // Render the questions on the screen
+//         div.innerHTML += `
+//         <h1>${questions}</h1>`
+//         // Calling the below func to get data from response and taking response as an argument to work
+//         renderQuestions(response);
+//         // Using catch method to work try properly
+//     }catch(error){
+//         // Logging the error ,if there an error in the api
+//         console.log(`error==>`,error);
+//     }
+// }
+// // Calling the func to work
+// getQuestions()
+    
+// // Making func to render questions by index on the screen
+// const renderQuestions = (arr) =>{
+//     // Applying map method on the arr which was taken as an argument
+//  arr.map((item,index)=>{
+//     div.innerHTML+=`
+//     <h1>Question ${index}) ${item.question.text}</h1>`
+//  })   
+// }
