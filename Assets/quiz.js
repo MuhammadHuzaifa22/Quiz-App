@@ -237,42 +237,171 @@ const div = document.querySelector("#quiz");
 
 
 
-// Making func to get data from api
+// // Making func to get data from api
+// const getQuestions = async ()=>{
+//     // Using try-catch method to get data 
+//     try{
+//         // Using fetch method to get data
+//         const data = await fetch("https://the-trivia-api.com/v2/questions");
+//         // Daclaring response and using .json method on data to convert  data into an array
+//         const response = await data.json();
+//         // Logging the response to check
+//         console.log(response);
+//         // Declaring questions and using map method on response to get questions from data
+//         const questions = response.map((item,index)=>{
+//             return `Question ${index}) ${item.question.text}<br>`
+//         })
+//         // Logging the questions to check
+//         console.log(questions);
+//         // Rendering the questions on the screen
+//         div.innerHTML += `
+//         <h1>${questions}</h1>`
+//         // Calling the renderQuestions func and taking response as an argument to get api data from this func
+//         renderQuestions(response);
+//         // Using catch method to work try properly and if there is an error in api
+//     }catch(error){
+//         console.log(`error==>`,error);
+//     }
+// }
+// // Calling the func to work
+// getQuestions();
+
+
+// // Making func to render questions on the screen by index
+// // Taking arr as an argument to get data from api
+// const renderQuestions = (arr) =>{
+//     // Using map method on arr to get questions from data
+//     arr.map((item,index)=>{
+//         div.innerHTML+= `
+//         <h1>Question ${index}) ${item.question.text}</h1>`
+//     })
+// }
+
+
+
+// // Making func to get data from the api
+// const getQuestions = async ()=>{
+//     // Using  async await and try-catch
+//     try{
+//         // Declaring data and using fetch
+//         const data = await fetch("https://the-trivia-api.com/v2/questions");
+//         // Declaring response and using .json method on data to convert data into an array
+//         const response  = await data.json();
+//         // Logging the response to check
+//         console.log(response);
+//         // declaring questions and using .map method on response to get questions from data
+//         const questions = response.map((item,index)=>{
+//             return `Question ${index}) ${item.question.text}<br>`
+//         })
+//         // Logging the questions to check
+//         console.log(questions);
+// // Rendering the questions on the screen
+//  div.innerHTML += `
+//  <h1>${questions}</h1>`
+// //  Calling the func and taking response as an argument to get data from this func
+//  renderQuestions(response);
+// //  Using catch for working the above try and if there is an error in the api
+//     }catch(error){
+//         console.log(`error==>`,error);
+//     }
+// }
+// // Calling the func to work
+// getQuestions();
+
+// // Making func to render the questions the screen
+// // Taking arr as an argument in the place of response
+// const renderQuestions = (arr)=>{
+//     // Using .map method on arr to get questions from data
+//     arr.map((item,index)=>{
+//         div.innerHTML += `
+//         <h1>Question ${index}) ${item.question.text}</h1>`
+//     })
+// }
+
+
+// // Making func to get data from api
+// // Using  async await method
+// const getQuestions = async () =>{
+//     // Using try-catch method  to get data
+// try{
+//     // Declaring data and using fetch method
+//     const data = await fetch("https://the-trivia-api.com/v2/questions");
+//     // Declaring response and using .json method on data to convert data into an an array
+//     const response = await data.json();
+//     // Logging the response to check
+//     console.log(response);
+//     // Declaring questions and using .map method on response to get only questions from data
+//     const questions = response.map((item,index)=>{
+//         return `Question ${index}) ${item.question.text}`
+//     })
+//     // Logging the response to chek
+//     console.log(questions);
+//     // Rendering questions on the screen
+//     div.innerHTML += `
+//     <h1>${questions}</h1>`
+//     // Calling the func to get data from this func and work
+//     renderQuestions(response);
+//     // Using catch function to work try properly
+// }catch(error){
+//     console.log(`error==>`,error);
+// }
+// }
+// // Calling th func
+// getQuestions();
+
+// // Making func to render questions on the screen
+// // Taking arr as an argument to get data from the above func
+// const renderQuestions = (arr)=>{
+//     // Using .map method on arr to render questions on the screen
+//     arr.map((item,index)=>{
+//         div.innerHTML+=
+//         `<h1>Question ${index}) ${item.question.text}</h1>`
+//     })
+// }
+
+
+
+
+
+// Making the func to get data from api
+// Using async await method
 const getQuestions = async ()=>{
-    // Using try-catch method to get data 
+    // Using try-catch method to get data
     try{
-        // Using fetch method to get data
-        const data = await fetch("https://the-trivia-api.com/v2/questions");
-        // Daclaring response and using .json method on data to convert  data into an array
+        // Using fetch method
+        const data =  await fetch("https://the-trivia-api.com/v2/questions");
+        // Using .json method to convert data into an array
         const response = await data.json();
-        // Logging the response to check
+        // Logging the response
         console.log(response);
-        // Declaring questions and using map method on response to get questions from data
+        // Using .map method to get only questions from data
         const questions = response.map((item,index)=>{
-            return `Question ${index}) ${item.question.text}<br>`
+            return `Question ${index} ${item.question.text}<br>`
         })
-        // Logging the questions to check
+        // Logging the questions
         console.log(questions);
-        // Rendering the questions on the screen
-        div.innerHTML += `
+        // Rendering questions on the screen
+        div.innerHTML+= `
         <h1>${questions}</h1>`
-        // Calling the renderQuestions func and taking response as an argument to get api data from this func
-        renderQuestions(response);
-        // Using catch method to work try properly and if there is an error in api
+        // Calling the below func to get api data from this func
+  renderQuestions(response);
+//   Using catch for work try properly
     }catch(error){
+        // Logging the error, if there is an error in the api
         console.log(`error==>`,error);
     }
 }
-// Calling the func to work
+// Calling the func
 getQuestions();
 
 
-// Making func to render questions on the screen by index
-// Taking arr as an argument to get data from api
-const renderQuestions = (arr) =>{
-    // Using map method on arr to get questions from data
+// Making func to render questions on the screen
+// Taking arr as an argument in the place of response to get data
+const renderQuestions = (arr)=>{
+    // Using map method on arr to render questions on the screen
     arr.map((item,index)=>{
-        div.innerHTML+= `
+        // Rendering the questions
+        div.innerHTML+=`
         <h1>Question ${index}) ${item.question.text}</h1>`
     })
 }
