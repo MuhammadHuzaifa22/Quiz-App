@@ -234,3 +234,32 @@ const div = document.querySelector("#quiz");
 //     <h1>Question ${index}) ${item.question.text}</h1>`
 //  })   
 // }
+
+
+
+
+const getQuestions = async ()=>{
+    try{
+        const data = await fetch("https://the-trivia-api.com/v2/questions");
+        const response = await data.json();
+        console.log(response);
+        const questions = response.map((item,index)=>{
+            return `Question ${index}) ${item.question.text}<br>`
+        })
+        console.log(questions);
+        div.innerHTML += `
+        <h1>${questions}</h1>`
+        renderQuestions(response);
+    }catch(error){
+        console.log(`error==>`,error);
+    }
+}
+getQuestions();
+
+
+const renderQuestions = (arr) =>{
+    arr.map((item,index)=>{
+        div.innerHTML+= `
+        <h1>Question ${index}) ${item.question.text}</h1>`
+    })
+}
