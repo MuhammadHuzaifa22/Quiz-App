@@ -237,27 +237,40 @@ const div = document.querySelector("#quiz");
 
 
 
-
+// Making func to get data from api
 const getQuestions = async ()=>{
+    // Using try-catch method to get data 
     try{
+        // Using fetch method to get data
         const data = await fetch("https://the-trivia-api.com/v2/questions");
+        // Daclaring response and using .json method on data to convert  data into an array
         const response = await data.json();
+        // Logging the response to check
         console.log(response);
+        // Declaring questions and using map method on response to get questions from data
         const questions = response.map((item,index)=>{
             return `Question ${index}) ${item.question.text}<br>`
         })
+        // Logging the questions to check
         console.log(questions);
+        // Rendering the questions on the screen
         div.innerHTML += `
         <h1>${questions}</h1>`
+        // Calling the renderQuestions func and taking response as an argument to get api data from this func
         renderQuestions(response);
+        // Using catch method to work try properly and if there is an error in api
     }catch(error){
         console.log(`error==>`,error);
     }
 }
+// Calling the func to work
 getQuestions();
 
 
+// Making func to render questions on the screen by index
+// Taking arr as an argument to get data from api
 const renderQuestions = (arr) =>{
+    // Using map method on arr to get questions from data
     arr.map((item,index)=>{
         div.innerHTML+= `
         <h1>Question ${index}) ${item.question.text}</h1>`
