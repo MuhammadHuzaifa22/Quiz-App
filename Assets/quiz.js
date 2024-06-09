@@ -197,44 +197,6 @@ const div = document.querySelector("#quiz");
 
 
 
-
-
-// Making function to get data from api
-const getQuestions = async()=>{
-  // Using try-catch method to get data from api
-  try{
-    // Using async await method
-    const data = await fetch('https://the-trivia-api.com/v2/questions');
-    // declare response and using await and using '.json' on data to convert data into array from;
-    const response = await data.json();
-    //  log the response to check;
-    console.log(response);
-    // Declare question and apply .map method on response to get only questions from array 
-    const questions = response.forEach((item,index) => {
-        return "Question:" + " " + index + " " + item.question.text + "<br>" + "<br>"
-    });
-      
-    // log the questions
-    console.log(questions);
-    // render all questions on the screen
-    div.innerHTML += `
-    <h1>${questions}</h1>`
-    // call the below function and taking 'response' as an argument ;
-    renderQuestions(response);
-    // Using catch to work the above try properly;
-  }catch(error){
-    console.log(`error==>`,error);
-  }
-}
-// Call the function
-getQuestions();
-
-// Making renderQuestion function to show questions step by step on the screen
-const renderQuestions = (arr) =>{
-arr.map((item,index)=>{
-  div.innerHTML += `
-  <h1>Questions:${index} ${item.question.text}</h1>`
-}) 
-}
+const getQuestions async = () 
 
 
