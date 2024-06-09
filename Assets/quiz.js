@@ -4,13 +4,13 @@ const questionContainer = document.querySelector('#questions-container');
 
 let questions = [];
 let currentIndex = 0;
-
-
+let incorrectAnswers;
 fetch('https://the-trivia-api.com/v2/questions')
 .then(response => response.json())
-console.log()
 .then(data => {
+    console.log(data)
     questions = data.map(item => item.question.text);
+    incorrectAnswers = data.map( item => item.incorrectAnswers);
     displayQuestion()
 })
     .catch(error => {
@@ -19,7 +19,10 @@ console.log()
     });
 function displayQuestion(){
     if(questions.length > 0){
-          questionContainer.innerHTML = `${currentIndex + 1}.) ${questions[currentIndex]}`
+          questionContainer.innerHTML = `
+          <h4>Question ${currentIndex + 1} of  ${questions.length}:</h4> <p>${currentIndex + 1}.) ${questions[currentIndex]}</p>
+          <li>${incorrectAnswers[currentIndex]}</li>`
+
     }
 }
 
