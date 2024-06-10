@@ -12,10 +12,14 @@ fetch('https://the-trivia-api.com/v2/questions')
     console.log(data)
     questions = data.map(item =>({
         question: item.question.text,
-        incorrectAnswers: item.incorrectAnswers
+        incorrectAnswers: item.incorrectAnswers,
+     correctAnswer: item.correctAnswer
     }))
-    displayQuestion(data)
-    
+    displayQuestion(currentIndex)
+    // console.log(questions[currentIndex])
+    // let answers = questions[currentIndex].incorrectAnswers.concat(questions[currentIndex].correctAnswer);
+    // answers = shuffleArray(answers);
+    // console.log(answers)
 })
 .catch(error => {
     questionContainer.innerHTML = 'Failed to load questions';
@@ -23,18 +27,27 @@ fetch('https://the-trivia-api.com/v2/questions')
 });
 
 
-function displayQuestion(data){
-    const questionIndex = 0; 
-    const selectedQuestion = questions[questionIndex];
-    console.log(selectedQuestion)
+
+// answers = shuffleArray(answers);
+
+function displayQuestion(index){
+    
     if(questions.length > 0){
-          questionContainer.innerHTML = `
-          <h4 style="font-weight:lighter">Question <b>${currentIndex + 1}</b> of <b>${questions.length}:</b> </h4> <p>${currentIndex + 1}. ${selectedQuestion.question} </h4>`
-          displayAnswers(questions[currentIndex].incorrectAnswers);
+        questionContainer.innerHTML = `
+        <h3 style="font-weight:lighter">Question <b>${currentIndex + 1}</b> of <b>${questions.length}:</b> </h3> <h5><b>${currentIndex + 1}.)</b> ${questions[currentIndex].question}</h5>`
+        console.log(questions[currentIndex].question)
+        const selectedQuestion = questions[index];
+        console.log(selectedQuestion.incorrectAnswers.concat(selectedQuestion.correctAnswer))
+            let answers = selectedQuestion.incorrectAnswers.concat(selectedQuestion.correctAnswer);
+        answers = shuffleArray(answers);
+        // console.log(answers)
+          answers = shuffleArray(answers);      
+        //   console.log(answerArr)
+        displayAnswers(answers);
     }
 }
 
-//   // Display incorrect answers
+//   // Display incorrect answers and correct answers
 function displayAnswers(answers) {
     answersList.innerHTML = '';
     answers.forEach(answer => {
@@ -56,4 +69,12 @@ nextButton.addEventListener('click',()=>{
     }
 })
  
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
