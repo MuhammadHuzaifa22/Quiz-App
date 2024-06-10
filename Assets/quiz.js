@@ -14,24 +14,27 @@ let questions = [];
                     incorrectAnswers: item.incorrectAnswers,
                     correctAnswer: item.correctAnswer
                 }));
+                document.getElementById("result-button").style.display = 'none'
                 showQuestion();
             })
             .catch(error => {
                 document.getElementById('question-container').innerHTML = 'Failed to load questions';
                 console.error('Error fetching questions:', error);
             });
-
+            
         document.getElementById('next-button').addEventListener('click', () => {
             currentQuestionIndex++;
             if (currentQuestionIndex < questions.length) {
                 showQuestion();
-            } else {
+            }
+            
+             else {
                 document.getElementById('question-container').innerHTML = 'Questions completed';
                 document.getElementById('answers-container').innerHTML = '';
-                const  checkResult = document.getElementById('next-button').innerHTML ='Check Result';
-                if(function CheckResult()){
-                    window.location = 'result.html'
-                }
+                document.getElementById("next-button").style.display = 'none'
+                document.getElementById("result-button").style.display = 'block'
+                               
+
             }
         });
 
@@ -43,7 +46,6 @@ let questions = [];
 
             const allAnswers = [...question.incorrectAnswers, question.correctAnswer];
             allAnswers.sort(() => Math.random() - 0.5); // Shuffle the answers
-
             allAnswers.forEach(answer => {
                 const answerElement = document.createElement('div');
                 answerElement.innerHTML = answer;
