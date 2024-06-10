@@ -29,33 +29,46 @@ fetch('https://the-trivia-api.com/v2/questions')
 
 
 // answers = shuffleArray(answers);
-
-function displayQuestion(index){
+let newArr = [];
+function renderQuestion(arr){
     
+    // const selectedQuestion = questions[index];
+    // let answers = selectedQuestion;
+  answers = shuffleArray([...selectedQuestion.incorrectAnswers, selectedQuestion.correctAnswer]);
     if(questions.length > 0){
         questionContainer.innerHTML = `
-        <h3 style="font-weight:lighter">Question <b>${currentIndex + 1}</b> of <b>${questions.length}:</b> </h3> <h5><b>${currentIndex + 1}.)</b> ${questions[currentIndex].question}</h5>`
+        <h3 style="font-weight:lighter">Question <b>${currentIndex + 1}</b> of <b>${questions.length}:</b> </h3> <h5><b>${currentIndex + 1}.)</b> ${questions[currentIndex].question}</h5>
+      <ul>
+          ${answers.map(answer => `<li>${answer}</li>`).join('')}
+      </ul>`
         console.log(questions[currentIndex].question)
-        const selectedQuestion = questions[index];
-        console.log(selectedQuestion.incorrectAnswers.concat(selectedQuestion.correctAnswer))
-            let answers = selectedQuestion.incorrectAnswers.concat(selectedQuestion.correctAnswer);
-        answers = shuffleArray(answers);
-        // console.log(answers)
-          answers = shuffleArray(answers);      
-        //   console.log(answerArr)
-        displayAnswers(answers);
+
+        // <h2>${selectedQuestion.question}</h2>
+
+        
+
+
+        // console.log(selectedQuestion.incorrectAnswers.concat(selectedQuestion.correctAnswer))
+        // console.log(Answers)
+        // displayAnswers(answers);
+        const answerObj = {
+           Incorrect: [...selectedQuestion.incorrectAnswers],
+            Correct : [...selectedQuestion.correctAnswer]
+        };
+        newArr.push(answerObj)
+          console.log(newArr)
     }
 }
 
 //   // Display incorrect answers and correct answers
-function displayAnswers(answers) {
-    answersList.innerHTML = '';
-    answers.forEach(answer => {
-        const li = document.createElement('li');
-        li.textContent = answer;
-        answersList.appendChild(li);
-    });
-}
+// function displayAnswers(answers) {
+//     answersList.innerHTML = '';
+//     answers.forEach(answer => {
+//         const li = document.createElement('li');
+//         li.textContent = answer;
+//         answersList.appendChild(li);
+//     });
+// }
 
 
 
