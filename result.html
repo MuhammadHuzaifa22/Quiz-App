@@ -4,25 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
+    <!-- Css Link -->
+    <link rel="stylesheet" href="./Assets/style.css">
+
 </head>
 <body>
     
+    <section>
     <h1>Result</h1>
-<h3 class="result">Marks 0/100</h3>
-<h4 class="condition"></h4>
+    
+    <h4 class="condition"></h4>
+    <h4 class="conditiontwo"></h4>
+    <h4 class="conditionthree"></h4>
+    <h4 class="conditionfour"></h4>
+    <h4 class="conditionfive"></h4>
+    <h4 class="conditionsix"></h4>
+    <h3 class="conditionseven" >Passing Marks: <b>50</b></h3>
 
 
+   <div class="gradeT">
+    <h1 class="grade"></h1>
+</div>
+    <div class="total">
+        <h3 class="result">Your total marks 0/100</h3>
+        <h3 class="result-total">Total Marks: <b><span>100</span></b></h3>
+    </div>
+    </section>
 <script>
     const result = JSON.parse(localStorage.getItem("result"))
     const h3 = document.querySelector('.result');
     const conditionNote = document.querySelector('.condition')
+    const conditionNotetwo = document.querySelector('.conditiontwo')
+    const conditionNotethree = document.querySelector('.conditionthree')
+    const conditionNotefour = document.querySelector('.conditionfour')
+    const conditionNotefive = document.querySelector('.conditionfive')
+    const conditionNotesix = document.querySelector('.conditionfive')
+    const grade = document.querySelector('.grade')
+
+
+
     console.log(result.result)
-    if(result.result < 50){
-        conditionNote.innerHTML = `You are  failed! ,you are eliminated from this course.`
-    }else if(result.result <= 50){
-        conditionNote.innerHTML = `You are  passed! ,but next time we are hoping you will do well`
+    if(result.result < 20){
+        conditionNote.innerHTML = `<b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        grade.innerHTML = `Grade: <b>No Grade</b>`
+        conditionNotesix.innerHTML = `No grade because you obtained very low marks`
+
     }
-    h3.innerHTML = `Marks ${result.result}/${result.totalMarks}`
+   else if(result.result < 30){
+        conditionNote.innerHTML = `<b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        grade.innerHTML = `Grade: <b>F</b>`
+    }
+    else if(result.result < 40){
+        conditionNote.innerHTML = `<b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        grade.innerHTML = `Grade: <b>E</b>`
+    }
+    else if(result.result < 50){
+        conditionNote.innerHTML = `<b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        grade.innerHTML = `Grade: <b>D</b>`
+
+    }else if(result.result < 60){
+        conditionNotetwo.innerHTML = `<b>Note: </b>You are  passed! ,but next time we are hoping you will do well`
+        grade.innerHTML = `Grade: <b>C</b>`
+
+    }else if(result.result < 70 ){
+        conditionNotethree.innerHTML = `<b>Note: </b>Congrats!You are  passed!,but next we want to see improveness`
+        grade.innerHTML = `Grade: <b>B</b>`
+    }
+    else if(result.result < 80 ){
+        conditionNotefour.innerHTML = `<b>Note: </b>Congrats!You are  passed! ,welldone`
+        grade.innerHTML = `Grade: <b>A</b>`
+    }
+    h3.innerHTML = `Your Total Marks: <b><span>${result.result}</span></b>`
     console.log(result);
 </script>
 

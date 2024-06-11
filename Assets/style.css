@@ -4,3 +4,80 @@
     list-style-type: none;
     font-weight: lighter;
     }
+section{
+    border: 1px solid black;
+    max-width: 600px;
+    margin: auto;
+font-family: monospace;
+    
+}
+
+h1{
+    text-align: center;
+    color: blue;
+}
+
+.result{
+    text-align: center;
+    font-weight: lighter;
+    border: 3px solid red;
+    padding: 3%;
+
+}
+.conditionseven{
+    text-align: center;
+    font-weight: lighter;
+}
+.gradeT{
+    border: 1px solid rgb(0, 255, 0);
+    background: rgb(0, 255, 0);
+    color: white;
+}
+.result-total{
+    text-align: center;
+    font-weight: lighter;
+    border: 3px solid red;
+    padding: 3%;
+
+}
+
+.condition{
+    text-align: center;
+    font-weight: normal;
+    background: rgba(255, 0, 0, 0.911);
+    padding: 1%;
+}
+.conditiontwo{
+    text-align: center;
+    font-weight: normal;
+    background: greenyellow;
+
+}
+.conditionthree{
+    text-align: center;
+    font-weight: normal;
+    background: greenyellow;;
+
+}
+.conditionfour{
+    text-align: center;
+    font-weight: normal;
+    background: greenyellow;;
+}
+.conditionfive{
+    text-align: center;
+    font-weight: normal;
+    background: greenyellow;;
+}
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3%;
+    border: 1px solid rgba(3, 3, 253, 0.788);
+    background: rgba(3, 3, 253, 0.788);
+    color: yellow;
+}
+span{
+    color: black;
+}
