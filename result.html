@@ -11,7 +11,7 @@
 <body>
     
     <section>
-    <h1>Result</h1>
+    <h1>Report Card</h1>
     
     <h4 class="condition"></h4>
     <h4 class="conditiontwo"></h4>
@@ -19,9 +19,7 @@
     <h4 class="conditionfour"></h4>
     <h4 class="conditionfive"></h4>
     <h4 class="conditionsix"></h4>
-    <h3 class="conditionseven" >Passing Marks: <b>50</b></h3>
-
-
+    <h3 class="conditionseven" style="background: #000;border: 1px solid white;color: white;padding: 1%;">Passing Marks: <b>50</b></h3>
    <div class="gradeT">
     <h1 class="grade"></h1>
 </div>
@@ -32,13 +30,14 @@
     </section>
 <script>
     const result = JSON.parse(localStorage.getItem("result"))
+    const storedChechArrJSON = localStorage.getItem('chechArr');
     const h3 = document.querySelector('.result');
     const conditionNote = document.querySelector('.condition')
     const conditionNotetwo = document.querySelector('.conditiontwo')
     const conditionNotethree = document.querySelector('.conditionthree')
     const conditionNotefour = document.querySelector('.conditionfour')
     const conditionNotefive = document.querySelector('.conditionfive')
-    const conditionNotesix = document.querySelector('.conditionfive')
+    const conditionNotesix = document.querySelector('.conditionsix')
     const grade = document.querySelector('.grade')
 
 
@@ -67,14 +66,21 @@
         grade.innerHTML = `Grade: <b>C</b>`
 
     }else if(result.result < 70 ){
-        conditionNotethree.innerHTML = `<b>Note: </b>Congrats!You are  passed!,but next we want to see improveness`
+        conditionNotethree.innerHTML = `<b>Note: </b>Congrats!You are  passed!,but next time we want to see improveness`
         grade.innerHTML = `Grade: <b>B</b>`
     }
     else if(result.result < 80 ){
         conditionNotefour.innerHTML = `<b>Note: </b>Congrats!You are  passed! ,welldone`
         grade.innerHTML = `Grade: <b>A</b>`
     }
-    h3.innerHTML = `Your Total Marks: <b><span>${result.result}</span></b>`
+    else if(result.result < 90 ){
+        conditionNotefive.innerHTML = `<b>Note: </b>Congrats!You are  passed! ,marwellous`
+        grade.innerHTML = `Grade: <b>A+</b>`
+    }else if(result.result <= 100 ){
+        conditionNotesix.innerHTML = `<b>Note: </b>Congrats!You are  passed! ,wonderfull marwellous`
+        grade.innerHTML = `Grade: <b>A++</b>`
+    }
+    h3.innerHTML = `Obtained Marks: <b><span>${result.result}</span></b>`
     console.log(result);
 </script>
 

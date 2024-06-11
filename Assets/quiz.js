@@ -97,14 +97,21 @@ function Result(){
 
 
 
+let chechArr = [];
 nextButton.addEventListener("click", () => {
     const choice = document.querySelectorAll(".choice");
     div.innerHTML = "";
     choice.forEach((item) => {
       if (item.checked) {
-        console.log(item.value)
-        if (item.nextSibling.innerHTML = questions[index].correctAnswer) {
+
+        if (item.value === questions[index].correctAnswer) {
             result += 10;
+        console.log(questions[index].incorrectAnswers)
+        chechArr.push(item.value)
+        console.log(chechArr);
+        const chechArrJSON = JSON.stringify(chechArr);
+        localStorage.setItem('chechArr', chechArrJSON);
+        
         }
       }
     });

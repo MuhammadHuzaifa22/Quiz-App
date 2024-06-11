@@ -1,14 +1,15 @@
 
 #jk{
-    font-size: 26px;
-    list-style-type: none;
-    font-weight: lighter;
+font-size: 26px;
+list-style-type: none;
+font-weight: lighter;
     }
 section{
-    border: 1px solid black;
-    max-width: 600px;
-    margin: auto;
+border: 1px solid black;
+max-width: 600px;
+margin: auto;
 font-family: monospace;
+box-shadow: 2px 2px 2px 2px  blue;
     
 }
 
@@ -20,8 +21,9 @@ h1{
 .result{
     text-align: center;
     font-weight: lighter;
-    border: 3px solid red;
-    padding: 3%;
+    border: 3px solid white;
+    padding: 1%;
+    background: white;
 
 }
 .conditionseven{
@@ -36,8 +38,9 @@ h1{
 .result-total{
     text-align: center;
     font-weight: lighter;
-    border: 3px solid red;
-    padding: 3%;
+    border: 3px solid white;
+    padding: 1%;
+    background: white;
 
 }
 
@@ -45,7 +48,6 @@ h1{
     text-align: center;
     font-weight: normal;
     background: rgba(255, 0, 0, 0.911);
-    padding: 1%;
 }
 .conditiontwo{
     text-align: center;
@@ -67,17 +69,22 @@ h1{
 .conditionfive{
     text-align: center;
     font-weight: normal;
-    background: greenyellow;;
+    background: greenyellow;
+}
+.conditionsix{
+    text-align: center;
+    font-weight: normal;
+    color: black;
+    background: greenyellow;
 }
 .total{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 3%;
-    border: 1px solid rgba(3, 3, 253, 0.788);
-    background: rgba(3, 3, 253, 0.788);
-    color: yellow;
+    gap: 1%;
+    background: black;
+    color:blue;
 }
 span{
-    color: black;
+    color: blue;
 }
