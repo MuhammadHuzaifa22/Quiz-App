@@ -2,6 +2,8 @@ const nextButton = document.querySelector('#next-button');
 const answersList = document.getElementById('answers');
 const quest = document.getElementById('quest');
 
+
+
 let questions = [];
         let currentQuestionIndex = 0;
 
@@ -57,3 +59,47 @@ const ul = document.querySelector('ul');
 function result(){
     window.location = 'result.html'
 }
+
+
+
+
+
+nextButton.addEventListener("click", () => {
+    const choice = document.querySelectorAll(".choice");
+    div.innerHTML = "";
+    choice.forEach((item) => {
+      if (item.checked) {
+        if (item.nextSibling.innerHTML === questionsArr[index].correctAnswer) {
+          result += 10;
+        }
+      }
+    });
+    index += 1;
+    renderQuestion(questionsArr);
+  });
+
+
+
+
+
+// how to get checked value from radio btn
+
+// const input = document.querySelectorAll(".gender");
+// function hello() {
+//     let isChecked = false;
+
+//     input.forEach((item) => {
+//         if (item.checked) {
+//             console.log(item.value);
+//             isChecked = true;
+//         }
+//     });
+
+//     if (!isChecked) {
+//         alert("Please check a value.");
+//     }
+// }
+
+
+
+
