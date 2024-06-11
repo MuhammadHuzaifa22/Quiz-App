@@ -7,5 +7,25 @@
 </head>
 <body>
     
+    <h1>Result</h1>
+<h3 class="result">Marks 0/100</h3>
+<h4 class="condition"></h4>
+
+
+<script>
+    const result = JSON.parse(localStorage.getItem("result"))
+    const h3 = document.querySelector('.result');
+    const conditionNote = document.querySelector('.condition')
+    console.log(result.result)
+    if(result.result < 50){
+        conditionNote.innerHTML = `You are  failed! ,you are eliminated from this course.`
+    }else if(result.result <= 50){
+        conditionNote.innerHTML = `You are  passed! ,but next time we are hoping you will do well`
+    }
+    h3.innerHTML = `Marks ${result.result}/${result.totalMarks}`
+    console.log(result);
+</script>
+
+
 </body>
 </html>
