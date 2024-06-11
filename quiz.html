@@ -13,9 +13,9 @@
    <!-- Font Awesome Link -->
    <script src="https://kit.fontawesome.com/0ae0890014.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="allcont">
     <!-- Navbar Started -->
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg quizNav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" style="color: white;font-weight: bolder;font-size: 25px;">Smit Quiz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,24 +29,31 @@
         
         <a class="nav-link" href="home.html" style="color: white;font-weight: bolder;font-size: 25px;">Home</a>
         
-      </div>
+    </div>
     </div>
 </nav>
 
 <!-- Navbar Ended   -->
-<h1 style="text-align: center;color: white;margin-top: 3%;">Coming Soon...</h1>
+<div >
+    <div class="secB">
+    
+        <div id="quest"></div>
+        <div id="question-container"></div>
+        <div id="answers-container"></div>
+        
+        
+        <div id="quiz"></div>
+        <div class="but-divv">
+            <button id="next-button" >Next</button><br><br>
+        </div>
+        <div class="check-but">
+            <button id="result-button" onclick="Result()">Check Result</button> 
+        </div>
+    </div>
+</div>
 
 
-<div id="quest"></div>
-<div id="question-container"></div>
-<div id="answers-container"></div>
-
-
-<div id="quiz"></div>
-<button id="next-button" >Next</button><br><br>
-<button id="result-button" onclick="Result()">Check Result</button> 
-
-
+    
     <!-- Bootstrap Link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

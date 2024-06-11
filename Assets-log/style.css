@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('../Assets/Images/multicolored-abstract-textured-grunge-background-template-vector.jpg');
+    background-size:cover;
+}
+
+form{
+margin-top: 1%;
+flex-direction: column;
+border: 1px solid black;
+padding: 1%;
+border-radius: 5px;
+}
+
+label{
+color: deepskyblue;
+font-weight: bolder;
+
+}
+button{
+    padding: 8px 5px;
+    font-weight: bolder;
+    background:deepskyblue;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    
+}
+
+button:hover{
+    background: black;
+    color: white;
+
+}
+nav{
+    background-image: url('../Assets/Images/pngtree-abstract-light-colored-paint-texture-background-wallpaper-image_13802780.png');
+    background-size: cover;
+}
+
+@media(max-width:694px){
+    h1{
+        margin-left: 5%;
+        font-size: 20px;
+    }
+}
+
+.but-div{
+    margin-left: 30%;
+}
+
+
+
+
+
+
+

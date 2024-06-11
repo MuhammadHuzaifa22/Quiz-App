@@ -8,29 +8,43 @@
     <link rel="stylesheet" href="./Assets/style.css">
 
 </head>
-<body>
-    
-    <section>
-    <h1>Report Card</h1>
-    
+<body class="allcont1"> 
+    <p style="text-align: center;font-weight: lighter;"><b>Note: </b><span>To </span><b>print</b> this <b><span>report card</span></b> click this button<button onclick="printSection()" style="margin-left: 0.5%;"><b>Print Report Card</b></button></p>
+    <section id="sectionToPrint">
+        <h1 id="h1">Report Card</h1>
+        <div class="thre">
+            <div class="thro">
+                <h4 class="hk"></h4>
+            </div>
+            <div class="thr">
+                <h4 class="hv"></h4>
+            </div>
+        </div>
     <h4 class="condition"></h4>
     <h4 class="conditiontwo"></h4>
     <h4 class="conditionthree"></h4>
     <h4 class="conditionfour"></h4>
     <h4 class="conditionfive"></h4>
     <h4 class="conditionsix"></h4>
+    <h3 id="number-text" style="background: deepskyblue;text-align: center;"></h3>
+    <ul id="out-put" style="background:brown;color: white;padding: 2%;list-style: none;border: 1px solid black;"><b><span id="sel">Correct Selected Answers Of Questions:</span></b> </ul>
     <h3 class="conditionseven" style="background: #000;border: 1px solid white;color: white;padding: 1%;">Passing Marks: <b>50</b></h3>
-   <div class="gradeT">
-    <h1 class="grade"></h1>
+    <h3 class="newhthree"></h3>
+    <div class="gradeT">
+        <h1 class="grade"></h1>
 </div>
     <div class="total">
-        <h3 class="result">Your total marks 0/100</h3>
+        <h3 class="result">Obtained Marks: 0</h3>
         <h3 class="result-total">Total Marks: <b><span>100</span></b></h3>
     </div>
-    </section>
+</section>
+
+
+
 <script>
+    const number = Number(localStorage.getItem('numberKey'));
     const result = JSON.parse(localStorage.getItem("result"))
-    const storedChechArrJSON = localStorage.getItem('chechArr');
+    const storedChechArrJSON = JSON.parse(localStorage.getItem('correct'));
     const h3 = document.querySelector('.result');
     const conditionNote = document.querySelector('.condition')
     const conditionNotetwo = document.querySelector('.conditiontwo')
@@ -38,16 +52,44 @@
     const conditionNotefour = document.querySelector('.conditionfour')
     const conditionNotefive = document.querySelector('.conditionfive')
     const conditionNotesix = document.querySelector('.conditionsix')
+    const numberText = document.getElementById('number-text');
     const grade = document.querySelector('.grade')
+    const section  = document.querySelector('section');
+    const outPut = document.getElementById('out-put');
+    const getArr = localStorage.getItem('send')
+    let usersArrayFromStorage = JSON.parse(getArr);
+    let email = usersArrayFromStorage[0].Email;
+    let username = usersArrayFromStorage[0].Username;
+    const email1 = `Your Email: ${email}`;
+    const user1 = `Your Name: ${username}`;
+    const hk = document.querySelector('.hk');
+    const hv = document.querySelector('.hv');
 
 
 
+
+
+console.log(storedChechArrJSON)
+numberText.innerHTML = `Correct Answers: ${number}`;
+hk.innerHTML = `${email1}`;
+if(username === null){
+    hv.innerHTML = 'Your Name: abc'
+}else{
+    hv.innerHTML = `${user1}`;
+}
+
+
+storedChechArrJSON.forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.textContent = item;
+    outPut.appendChild(listItem);
+});
     console.log(result.result)
     if(result.result < 20){
         conditionNote.innerHTML = `<b>Note: </b>You are  failed! ,you are eliminated from this course.`
         grade.innerHTML = `Grade: <b>No Grade</b>`
         conditionNotesix.innerHTML = `No grade because you obtained very low marks`
-
+ 
     }
    else if(result.result < 30){
         conditionNote.innerHTML = `<b>Note: </b>You are  failed! ,you are eliminated from this course.`
@@ -82,6 +124,10 @@
     }
     h3.innerHTML = `Obtained Marks: <b><span>${result.result}</span></b>`
     console.log(result);
+
+    function printSection() {
+    window.print();
+}
 </script>
 
 

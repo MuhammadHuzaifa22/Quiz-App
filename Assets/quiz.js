@@ -49,14 +49,14 @@ const getQuestions = async () => {
                 ];
                 resultButton.style.display = 'none';
                 div.innerHTML += `
-                <h2 style="font-weight:lighter">Question <b>${currentQuestionIndex} </b>of <b>${questions.length} :</b></h2>
-                <h3 style="font-weight:lighter"><b>Q${index + 1}</b>: ${arr[index].question.text}</h3>
+                <h2 style="font-weight:lighter;color:brown">Question <b>${currentQuestionIndex} </b>of <b>${questions.length} :</b></h2>
+                <h3 style="font-weight:500;color:black"><b>Q${index + 1}</b>: ${arr[index].question.text}</h3>
                 <ul>
                     ${shuffleArray(answerArr).map((items) => `
-                    <card>
+                    <card >
                     <li id="jk" >
                     <input type="radio" name="choice" class="choice" id="${items}" value="${items}">
-                    <label for="${items}">${items}</label>
+                    <label for="${items}" class="radio-label" ><span id="lB">${items}</span></label>
                 </li>
             `).join('')}
         </ul>
@@ -65,7 +65,7 @@ const getQuestions = async () => {
               
               } else {
                    console.log("question completed");
-                   div.innerHTML = `<h2>Questions Completed</h2>`
+                   div.innerHTML = `<h2 style="color:green;text-align:center;">Questions Completed</h2>`
                     console.log(result)
                     resultButton.style.display = 'block';
                     nextButton.style.display = 'none'            
@@ -107,10 +107,17 @@ nextButton.addEventListener("click", () => {
         if (item.value === questions[index].correctAnswer) {
             result += 10;
         console.log(questions[index].incorrectAnswers)
-        chechArr.push(item.value)
+        const Correct =questions[index].question.text
+        console.log(Correct)
+        const quest = index + 1;
+        chechArr.push(`Question no ${quest}: ${Correct} Answer: ${item.value}.`)
         console.log(chechArr);
+        
+        console.log(chechArr.length)
         const chechArrJSON = JSON.stringify(chechArr);
-        localStorage.setItem('chechArr', chechArrJSON);
+        localStorage.setItem('correct', chechArrJSON);
+        const number = chechArr.length;
+        localStorage.setItem('numberKey', number)
         
         }
       }

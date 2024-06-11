@@ -1,9 +1,49 @@
 
 #jk{
-font-size: 26px;
-list-style-type: none;
+font-size: 20px;
+list-style: none;
 font-weight: lighter;
-    }
+color: white;
+}
+#lB{
+    color: black;
+}
+
+.choice {
+    display: none;
+}
+
+
+.radio-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 2%; 
+    cursor: pointer;
+    background-color: cornflowerblue; 
+    border: 1px solid rgba(8, 109, 224, 0.616);
+    margin-top: 1%;
+    color: white;
+
+}
+
+
+.choice + .radio-label:before {
+    content: '';
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+}
+
+.choice:checked + .radio-label:before {
+    background-color:  black; 
+    border-color: blue;
+}
+
+
+
 section{
 border: 1px solid black;
 max-width: 600px;
@@ -13,9 +53,11 @@ box-shadow: 2px 2px 2px 2px  blue;
     
 }
 
-h1{
+#h1{
     text-align: center;
     color: blue;
+    border-bottom: 1px solid deepskyblue;
+    padding-bottom: 1%;
 }
 
 .result{
@@ -31,9 +73,10 @@ h1{
     font-weight: lighter;
 }
 .gradeT{
-    border: 1px solid rgb(0, 255, 0);
-    background: rgb(0, 255, 0);
+    border: 1px solid deepskyblue;
+    background: deepskyblue;
     color: white;
+    text-align: center;
 }
 .result-total{
     text-align: center;
@@ -47,7 +90,7 @@ h1{
 .condition{
     text-align: center;
     font-weight: normal;
-    background: rgba(255, 0, 0, 0.911);
+    background: rgba(231, 62, 62, 0.925);
 }
 .conditiontwo{
     text-align: center;
@@ -86,5 +129,93 @@ h1{
     color:blue;
 }
 span{
-    color: blue;
+    color: deepskyblue;
 }
+#sel{
+    color: deepskyblue;
+}
+
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #sectionToPrint, #sectionToPrint * {
+        visibility: visible;
+    }
+}
+.but_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.quizNav{
+    background: cornflowerblue;
+}
+.secB{
+    margin :4% 4%;
+    border: 1px solid lightgreen;
+    padding: 1%;
+    background-image:url('./Images/pngtree-abstract-light-colored-paint-texture-background-wallpaper-image_13802780.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#next-button{
+    background: #000;
+    color: white;
+    height: 30px;
+    font-size: 17px;
+    font-weight: bolder;
+border: none;
+}
+#next-button:hover{
+    background:deepskyblue;
+    color: black;
+    height: 30px;
+    font-weight: bolder;
+    font-size: 17px;
+border: none;
+
+}
+.but-divv{
+    display: flex;
+    justify-content: center;
+}
+.allcont1{
+    background-image:url('./Images/depositphotos_612543668-stock-photo-abstract-line-blue-white-wave.jpg');
+    background-size: cover;
+}
+.allcont{
+    background-image:url('./Images/multicolored-abstract-textured-grunge-background-template-vector.jpg');
+    background-size: cover;
+}
+.check-but{
+    display: flex;
+    justify-content: center;
+}
+.check-but button{
+    background: greenyellow;
+    border:1px solid blue;
+    padding: 1%;
+}
+.check-but button:hover{
+    background: deepskyblue;
+    border:1px solid blue;
+    padding: 1%;
+}
+.thre{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    justify-content: center;
+}
+.thro{
+border: 1px solid black;
+background-color: darkviolet;
+color: white;
+}
+.thr{
+    border: 1px solid black;
+    background-color: darkviolet;
+    color: white;
+    }
