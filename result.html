@@ -6,7 +6,8 @@
     <title>Result</title>
     <!-- Css Link -->
     <link rel="stylesheet" href="./Assets/style.css">
-
+<!-- Font Awesome Link -->
+<script src="https://kit.fontawesome.com/0ae0890014.js" crossorigin="anonymous"></script>
 </head>
 <body class="allcont1"> 
     <p style="text-align: center;font-weight: lighter;color: white;"><b>Note: </b><span>To </span><b>print</b> this <b><span>report card</span></b> click this button<button onclick="printSection()" style="margin-left: 0.5%;"><b>Print Report Card</b></button></p>
@@ -104,40 +105,40 @@ if (storedChechArrJSON) {
 }
     console.log(result.result)
     if(result.result < 20){
-        conditionNote.innerHTML = `<b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding-top:1%"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
         grade.innerHTML = `Grade: <b>No Grade</b>`
         conditionNotesix.innerHTML = `No grade because you obtained very low marks`
  
     }
    else if(result.result < 30){
-        conditionNote.innerHTML = `<b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding-top:1%"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
         grade.innerHTML = `Grade: <b>F</b>`
     }
     else if(result.result < 40){
-        conditionNote.innerHTML = `<b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding-top:1%"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
         grade.innerHTML = `Grade: <b>E</b>`
     }
     else if(result.result < 50){
-        conditionNote.innerHTML = `<b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding-top:1%"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
         grade.innerHTML = `Grade: <b>D</b>`
 
     }else if(result.result < 60){
-        conditionNotetwo.innerHTML = `<b>Note: </b>You are  passed! ,but next time we are hoping you will do well`
+        conditionNotetwo.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding-top:1%"> Passed</i><br><b>Note: </b>You are  passed! ,but next time we are hoping you will do well`
         grade.innerHTML = `Grade: <b>C</b>`
 
     }else if(result.result < 70 ){
-        conditionNotethree.innerHTML = `<b>Note: </b>Congrats!You are  passed!,but next time we want to see improveness`
+        conditionNotethree.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding-top:1%"> Passed</i><br><b>Note: </b>Congrats!You are  passed!,but next time we want to see improveness`
         grade.innerHTML = `Grade: <b>B</b>`
     }
     else if(result.result < 80 ){
-        conditionNotefour.innerHTML = `<b>Note: </b>Congrats!You are  passed! ,welldone`
+        conditionNotefour.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding-top:1%"> Passed</i><br><b>Note: </b>Congrats!You are  passed! ,welldone`
         grade.innerHTML = `Grade: <b>A</b>`
     }
     else if(result.result < 90 ){
-        conditionNotefive.innerHTML = `<b>Note: </b>Congrats!You are  passed! ,marwellous`
+        conditionNotefive.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding-top:1%"> Passed</i><br><b>Note: </b>Congrats!You are  passed! ,marwellous`
         grade.innerHTML = `Grade: <b>A+</b>`
     }else if(result.result <= 100 ){
-        conditionNotesix.innerHTML = `<b>Note: </b>Congrats!You are  passed! ,wonderfull marwellous`
+        conditionNotesix.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding-top:1%"> Passed</i><br><b>Note: </b>Congrats!You are  passed! ,wonderfull marwellous`
         grade.innerHTML = `Grade: <b>A++</b>`
     }
     h3.innerHTML = `Obtained Marks: <b><span>${result.result}</span></b>`

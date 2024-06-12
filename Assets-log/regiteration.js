@@ -3,26 +3,36 @@ const password = document.getElementById('password');
 const username = document.getElementById('fullName');
 const form = document.querySelector('form');
 
-let usersArray = [];
 
-
-let allarr = [];
 
 
 
 form.addEventListener('submit',function(e){
     e.preventDefault();
-     usersArray.push({
-         Email: email.value,
-         Password: password.value,
-         Username:username.value
-        })         
-        console.log(usersArray)
+    let newUser = {
+        Email: email.value,
+        Password: password.value,
+        Username:username.value
+    }         
+    
+    let storedUsersJSON = localStorage.getItem('users');
+    let users = storedUsersJSON ? JSON.parse(storedUsersJSON) : [];
         
+    let userExists = users.some(user => user.Email === email);
+    if (userExists) {
+        alert('User already registered!');
+        return;
+        window.location = 'index.html';
+    }
+
+    users.push(newUser);
+    let updatedUsersJSON = JSON.stringify(users);
+
+    localStorage.setItem('users', updatedUsersJSON);
+
     
-    localStorage.setItem('send', JSON.stringify(usersArray))
-    console.log()    
     
-alert('User registered to our website');
-window.location = 'index.html';
+alert('User registered successfully!');
+    window.location = 'index.html'
+    document.getElementById('registerform').reset();
 })
