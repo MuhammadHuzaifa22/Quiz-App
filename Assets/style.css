@@ -6,7 +6,8 @@ font-weight: lighter;
 color: white;
 }
 #lB{
-    color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .choice {
@@ -19,7 +20,7 @@ color: white;
     position: relative;
     padding-left: 2%; 
     cursor: pointer;
-    background-color: cornflowerblue; 
+    background-color: #000; 
     border: 1px solid rgba(8, 109, 224, 0.616);
     margin-top: 1%;
     color: white;
@@ -35,10 +36,12 @@ color: white;
     border: 2px solid #ccc; 
     border-radius: 50%; 
     margin-right: 10px; 
+    background-color:  yellow; 
+
 }
 
 .choice:checked + .radio-label:before {
-    background-color:  black; 
+    background-color:  brown; 
     border-color: blue;
 }
 
@@ -48,16 +51,19 @@ section{
 border: 1px solid black;
 max-width: 600px;
 margin: auto;
+background-image: url('./Images/pexels-mastercowley-1128797.jpg');
+background-size: cover;
 font-family: monospace;
-box-shadow: 2px 2px 2px 2px  blue;
+box-shadow: 1px 1px 1px 1px  blue;
     
 }
 
 #h1{
     text-align: center;
-    color: blue;
+    color:white;
     border-bottom: 1px solid deepskyblue;
-    padding-bottom: 1%;
+    background-image: url('./Images/pexels-pixabay-207178.jpg');
+    background-size: cover;
 }
 
 .result{
@@ -74,8 +80,9 @@ box-shadow: 2px 2px 2px 2px  blue;
 }
 .gradeT{
     border: 1px solid deepskyblue;
-    background: deepskyblue;
-    color: white;
+    background-image: url('./Images/pngtree-abstract-light-colored-paint-texture-background-wallpaper-image_13802780.png');
+    background-size: cover;
+    color: black;
     text-align: center;
 }
 .result-total{
@@ -125,7 +132,8 @@ box-shadow: 2px 2px 2px 2px  blue;
     flex-direction: row;
     justify-content: center;
     gap: 1%;
-    background: black;
+    background-image: url('./Images/pexels-iriser-1379640.jpg');
+    background-size: cover;
     color:blue;
 }
 span{
@@ -150,7 +158,8 @@ span{
     justify-content: center;
 }
 .quizNav{
-    background: cornflowerblue;
+    background-image: url('../Assets/Images/pexels-lydia-bond-698937-1550618.jpg');
+    background-size: cover;
 }
 .secB{
     margin :4% 4%;
@@ -170,7 +179,7 @@ border: none;
 }
 #next-button:hover{
     background:deepskyblue;
-    color: black;
+    color: white;
     height: 30px;
     font-weight: bolder;
     font-size: 17px;
@@ -182,11 +191,11 @@ border: none;
     justify-content: center;
 }
 .allcont1{
-    background-image:url('./Images/depositphotos_612543668-stock-photo-abstract-line-blue-white-wave.jpg');
+    background-image:url('./Images/pexels-fwstudio-33348-164005.jpg');
     background-size: cover;
 }
 .allcont{
-    background-image:url('./Images/multicolored-abstract-textured-grunge-background-template-vector.jpg');
+    background-image:url('./Images/pexels-fwstudio-33348-164005.jpg');
     background-size: cover;
 }
 .check-but{
@@ -194,7 +203,7 @@ border: none;
     justify-content: center;
 }
 .check-but button{
-    background: greenyellow;
+    background: black;
     border:1px solid blue;
     padding: 1%;
 }
@@ -211,11 +220,13 @@ border: none;
 }
 .thro{
 border: 1px solid black;
-background-color: darkviolet;
+background-image: url('./Images/images\ \(1\).jpeg');
+background-size: cover;
 color: white;
 }
 .thr{
     border: 1px solid black;
-    background-color: darkviolet;
+    background-image: url('./Images/images\ \(1\).jpeg');
+    background-size: cover;
     color: white;
     }

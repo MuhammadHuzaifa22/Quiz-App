@@ -4,27 +4,34 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url('../Assets/Images/multicolored-abstract-textured-grunge-background-template-vector.jpg');
+    background-image: url('../Assets/Images/pexels-fwstudio-33348-164005.jpg');
     background-size:cover;
 }
 
 form{
-margin-top: 1%;
+margin-top: 3%;
 flex-direction: column;
-border: 1px solid black;
+border: 3px solid black;
 padding: 1%;
 border-radius: 5px;
+display: flex;
+justify-content: center;
+}
+input{
+    font-weight: bolder;
+
 }
 
+
 label{
-color: deepskyblue;
+color: black;
 font-weight: bolder;
 
 }
 button{
     padding: 8px 5px;
     font-weight: bolder;
-    background:deepskyblue;
+    background: black;
     border: none;
     color: white;
     border-radius: 25px;
@@ -32,13 +39,14 @@ button{
 }
 
 button:hover{
-    background: black;
+    background: brown;
     color: white;
 
 }
 nav{
-    background-image: url('../Assets/Images/pngtree-abstract-light-colored-paint-texture-background-wallpaper-image_13802780.png');
+    background-image: url('../Assets/Images/pexels-lydia-bond-698937-1550618.jpg');
     background-size: cover;
+    /* background-size: 100%; */
 }
 
 @media(max-width:694px){
