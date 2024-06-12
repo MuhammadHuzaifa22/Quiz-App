@@ -28,7 +28,8 @@
     <h4 class="conditionsix"></h4>
     <h3 id="number-text" style="background: deepskyblue;text-align: center;"></h3>
 
-    <ul id="out-put" style="background:brown;color: white;padding: 2%;list-style: none;border: 1px solid black;background-image: url('./Assets/Images/pexels-francesco-ungaro-281260.jpg');"><b><span id="sel">Correct Selected Answers Of Questions:</span></b> </ul>
+    <ul id="out-put" style="background:brown;color: white;padding: 2%;list-style: none;border: 1px solid black;background-image: url('./Assets/Images/pexels-francesco-ungaro-281260.jpg');"><b><span id="sel">Section Of Corrct Answers:</span></b> </ul>
+    <h3 class="none-T"></h3>
     <h3 class="conditionseven" style="background: #000;border: 1px solid white;color: white;padding: 1%;">Passing Marks: <b>50</b></h3>
     <h3 class="newhthree"></h3>
     <div class="gradeT">
@@ -43,9 +44,11 @@
 
 
 <script>
+    const nonT = document.querySelector('.non-T');
     const number = Number(localStorage.getItem('numberKey'));
+    const numkey = Number(localStorage.getItem('numkey'));
     const result = JSON.parse(localStorage.getItem("result"))
-    const storedChechArrJSON = JSON.parse(localStorage.getItem('correct'));
+    const storedChechArrJSON = localStorage.getItem('correct');
     const h3 = document.querySelector('.result');
     const conditionNote = document.querySelector('.condition')
     const conditionNotetwo = document.querySelector('.conditiontwo')
@@ -68,7 +71,7 @@
 
 
 
-
+console.log(numkey)
 
 console.log(storedChechArrJSON)
 numberText.innerHTML = `Correct Answers: ${number}`;
@@ -80,11 +83,25 @@ if(username === null){
 }
 
 
-storedChechArrJSON.forEach(item => {
-    const listItem = document.createElement('li');
-    listItem.textContent = item;
-    outPut.appendChild(listItem);
-});
+if (storedChechArrJSON) {
+    // Parse the JSON string into an array
+    const storedChechArr = JSON.parse(storedChechArrJSON);
+
+    // Check if storedChechArr is an array before proceeding
+    if (Array.isArray(storedChechArr)) {
+        storedChechArr.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = item;
+            listItem.classList.add('styled-list-item');
+            outPut.appendChild(listItem);
+        });
+    } else {
+        console.error('storedChechArr is not an array:', storedChechArr);
+    }
+} else {
+    console.error('No data found in local storage with key "correct".');
+    outPut.innerHTML = '<ul><h2 style="text-align:center;font-size:25px;font-weight:lighter;color:black">Section Of Selected Correct Answers</h2><h3 style="text-align:center;color:red;font-size:22px"><b>No Answer is selected</b></h3></ul>'
+}
     console.log(result.result)
     if(result.result < 20){
         conditionNote.innerHTML = `<b>Note: </b>You are  failed! ,you are eliminated from this course.`

@@ -140,7 +140,12 @@ span{
     color: deepskyblue;
 }
 #sel{
-    color: deepskyblue;
+    color: black;
+    margin-left:1%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 22px;
 }
 
 
@@ -205,6 +210,7 @@ border: none;
 .check-but button{
     background: black;
     border:1px solid blue;
+    color:white;
     padding: 1%;
 }
 .check-but button:hover{
@@ -230,3 +236,14 @@ color: white;
     background-size: cover;
     color: white;
     }
+
+
+.styled-list-item {
+color: blue;  
+margin-top: 2%;
+font-size: 20px; 
+padding: 10px;  
+background-color: #f0f0f0;  
+border: 1px solid #ccc;  
+text-align: center;
+}

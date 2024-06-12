@@ -98,21 +98,26 @@ function Result(){
 
 
 let chechArr = [];
+
+
+let unansweredQuestions = 0;
 nextButton.addEventListener("click", () => {
     const choice = document.querySelectorAll(".choice");
     div.innerHTML = "";
+    let answerSelected = false; 
+
     choice.forEach((item) => {
       if (item.checked) {
-
+        answerSelected = true;
         if (item.value === questions[index].correctAnswer) {
             result += 10;
-        console.log(questions[index].incorrectAnswers)
-        const Correct =questions[index].question.text
-        console.log(Correct)
+        // console.log(questions[index].incorrectAnswers)
         const quest = index + 1;
-        chechArr.push(`Question no ${quest}: ${Correct} Answer: ${item.value}.`)
+        const Correct =questions[index].question.text
+        chechArr.push(`Question no ${quest}: ${Correct} Answer:${item.value}.`)
         console.log(chechArr);
         
+        console.log(Correct)
         console.log(chechArr.length)
         const chechArrJSON = JSON.stringify(chechArr);
         localStorage.setItem('correct', chechArrJSON);
@@ -122,8 +127,20 @@ nextButton.addEventListener("click", () => {
         }
       }
     });
+    if (!answerSelected) {
+    message = 'no answer is selected';
+    console.log(message);
+    unansweredQuestions++;
+    console.log(unansweredQuestions)
+    if(unansweredQuestions === 10){
+      const numkey = unansweredQuestions;
+      // console.log(numkey)
+      localStorage.setItem('numkey',numkey);
+    }
+  }
         div.innerHTML = "";  
         index += 1;
         showQuestions(questions);
+  
   });
   
