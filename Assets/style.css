@@ -1,12 +1,14 @@
 
 #jk{
-font-size: 20px;
+font-size: 13px;
 list-style: none;
 font-weight: lighter;
-color: white;
+color: black;
+
 }
 #lB{
-    color: white;
+    color: black;
+    font-weight: lighter;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -16,65 +18,69 @@ color: white;
 
 
 .radio-label {
-    display: inline-block;
     position: relative;
     padding-left: 2%; 
-    cursor: pointer;
-    background-color: #000; 
-    border: 2px solid rgba(8, 109, 224, 0.616);
-    margin-top: 1%;
-    color: white;
-
+    background-color:lightgray; 
+margin-top: 1px;
 }
 .radio-label:hover {
-    display: inline-block;
     position: relative;
     padding-left: 2%; 
-    cursor: pointer;
-    background-color: chocolate; 
-    border: 2px solid black;
-    margin-top: 1%;
+    background-color: gray; 
     color:white;
-    font-weight: bolder;
 
 }
 
 .choice + .radio-label:before {
     content: '';
     display: inline-block;
-    width: 16px; 
-    height: 16px; 
-    border: 2px solid #ccc; 
+    width: 14px; 
+    height: 14px; 
+    border: 4px solid white; 
     border-radius: 50%; 
     margin-right: 10px; 
-    background-color:  yellow; 
+    background-color:  white; 
 
 }
 
 .choice:checked + .radio-label:before {
-    background-color:  brown; 
+    background-color:  white; 
     border-color: blue;
 }
 
 
 
 section{
-border: 1px solid black;
-max-width: 600px;
+border: 1px solid green;
+max-width: 400px;
 margin: auto;
-background-image: url('./Images/pexels-mastercowley-1128797.jpg');
-background-size: cover;
-font-family: monospace;
-box-shadow: 1px 1px 1px 1px  blue;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: white;
     
 }
 
 #h1{
     text-align: center;
-    color:black;
-    border-bottom: 1px solid deepskyblue;
+    color:balck;
+    padding-bottom: 1%;
+    padding-top: 1%;
 
+    font-family: fantasy;
+    font-size: 15px;
+    margin-top: 6%;
+    font-weight: lighter;
+    border-bottom: 1px solid green;
+border-top: 1px solid green;
 }
+.sect {
+display: flex;
+flex-direction: column;
+}
+.sect img{
+    width: 50%;
+    margin: auto;
+    margin-bottom: -7%;
+    }
 
 .result{
     text-align: center;
@@ -89,10 +95,13 @@ box-shadow: 1px 1px 1px 1px  blue;
     font-weight: lighter;
 }
 .gradeT{
-    border: 1px solid deepskyblue;
     color: black;
-    background: brown;
+    background: gainsboro;
     text-align: center;
+    font-size: 13px;
+    font-weight: lighter;
+    margin-bottom: -3%;
+    margin-top: -3.4%;
 }
 .result-total{
     text-align: center;
@@ -108,45 +117,46 @@ box-shadow: 1px 1px 1px 1px  blue;
     font-weight: normal;
     background: rgba(231, 62, 62, 0.925);
     text-align: center;
-
+margin-bottom: -5.5%;
 }
 .conditiontwo{
     font-weight: normal;
     background: greenyellow;
     text-align: center;
-
+    margin-bottom: -5.5%;
 }
 .conditionthree{
     font-weight: normal;
     background: greenyellow;;
     text-align: center;
 
+    margin-bottom: -5.5%;
+
 }
 .conditionfour{
     font-weight: normal;
     background: greenyellow;
     text-align: center;
-
+    margin-bottom: -5.5%;
 }
 .conditionfive{
     font-weight: normal;
     background: greenyellow;
     text-align: center;
-
+    margin-bottom: -5.5%;
 }
 .conditionsix{
     text-align: center;
     font-weight: normal;
-    color: black;
-    background: greenyellow;
+    color: white;
+    background: red;
+    margin-bottom: -3.3%;
 }
 .total{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 1%;
-    background: #000;
-    background-size: cover;
+    gap: 1px;
+    background:darkgrey;
     color:blue;
 }
 span{
@@ -155,10 +165,8 @@ span{
 #sel{
     color: black;
     margin-left:1%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 1px;
-    font-weight: normal;
-    font-size: 22px;
+    font-weight: lighter;
+    font-size: 15px;
 }
 
 
@@ -180,27 +188,25 @@ span{
 }
 .secB{
     margin :4% 4%;
-    border: 1px solid lightgreen;
     padding: 1%;
-    background-image:url('./Images/pngtree-abstract-light-colored-paint-texture-background-wallpaper-image_13802780.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 #next-button{
-    background: #000;
+    background:blue;
     color: white;
     height: 30px;
+    width: 70px;
     font-size: 17px;
-    font-weight: bolder;
-border: none;
+border: 1px solid green;
 }
 #next-button:hover{
-    background:deepskyblue;
+    background:greenyellow;
     color: white;
     height: 30px;
-    font-weight: bolder;
     font-size: 17px;
-border: none;
+    width: 70px;
+border: 1px solid green;
 
 }
 .but-divv{
@@ -208,7 +214,7 @@ border: none;
     justify-content: center;
 }
 .allcont1{
-    background: #000;
+    background: gainsboro;
 }
 
 .check-but{
@@ -216,32 +222,18 @@ border: none;
     justify-content: center;
 }
 .check-but button{
-    background: black;
-    border:1px solid blue;
+    background: blue;
+    border:1px solid green;
     color:white;
     padding: 1%;
 }
 .check-but button:hover{
-    background: deepskyblue;
-    border:1px solid blue;
+    background: greenyellow;
+    border:1px solid green;
+    color:white;
     padding: 1%;
 }
-.thre{
-    display: flex;
-    flex-direction: row;
-    gap: 2%;
-    justify-content: center;
-}
-.thro{
-background: #000;
-background-size: cover;
-color: white;
-}
-.thr{
-    background: #000;
-    background-size: cover;
-    color: white;
-    }
+
 
     nav{
         background: white;
@@ -249,11 +241,33 @@ color: white;
         box-shadow: 1px 1px 1px 1px  black;
     }
 .styled-list-item {
-color: blue;  
+color: black;  
 margin-top: 2%;
-font-size: 20px; 
-padding: 10px;  
-background-color: #f0f0f0;  
-border: 1px solid #ccc;  
+font-size: 13px;
+padding:5px;  
+background-color:white;  
 text-align: center;
+}
+.ho{
+    display: flex;flex-direction: row;
+    gap: 2%;
+    justify-content: center;
+    margin-bottom: -5.2%;
+    border: 1px solid black;
+    margin-top: -3%;
+}
+.hk{
+    font-weight:600;
+    border: 1px solid black;
+    padding: 1%;
+    font-size: 20px;
+    font-family: monospace;
+}
+.hv{
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 1%;
+    font-size: 20px;
+    font-family: monospace;
+
 }

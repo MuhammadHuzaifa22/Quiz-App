@@ -10,36 +10,36 @@
 <script src="https://kit.fontawesome.com/0ae0890014.js" crossorigin="anonymous"></script>
 </head>
 <body class="allcont1"> 
-    <p style="text-align: center;font-weight: lighter;color: white;"><b>Note: </b><span>To </span><b>print</b> this <b><span>report card</span></b> click this button<button onclick="printSection()" style="margin-left: 0.5%;"><b>Print Report Card</b></button></p>
+    <p style="text-align: center;font-weight: lighter;color: black;"><b>Note: </b><span>To </span><b>print</b> this <b><span>report card</span></b> click this button<button onclick="printSection()" style="margin-left: 0.5%;"><b>Print Report Card</b></button></p>
     <section id="sectionToPrint">
-        <h1 id="h1">Report Card</h1>
-        <div class="thre">
-            <div class="thro">
-                <h4 class="hk"></h4>
-            </div>
-            <div class="thr">
-                <h4 class="hv"></h4>
-            </div>
+        <div class="sect">
+            <img src="./Assets/Images/logo-OpazD70S.png" alt="">
+            <h1 id="h1">Your Report Card <i class="fa-solid fa-square-poll-horizontal" style="color: green;margin-left: 1%;"></i></h1>
         </div>
-    <h4 class="condition"></h4>
-    <h4 class="conditiontwo"></h4>
-    <h4 class="conditionthree"></h4>
+        <div class="ho">
+            <h4 class="hk"></h4>
+            <h4 class="hv"></h4>
+        </div>
+        </div>
+        <h4 class="condition"></h4>
+        <h4 class="conditiontwo"></h4>
+        <h4 class="conditionthree"></h4>
     <h4 class="conditionfour"></h4>
     <h4 class="conditionfive"></h4>
     <h4 class="conditionsix"></h4>
-    <h3 id="number-text" style="background: deepskyblue;text-align: center;"></h3>
-
-    <ul id="out-put" style="background:brown;color: white;padding: 2%;list-style: none;border: 1px solid black;background-image: url('./Assets/Images/pexels-francesco-ungaro-281260.jpg');"><b><span id="sel">Section Of Corrct Answers:</span></b> </ul>
-    <h3 class="none-T"></h3>
-    <h3 class="conditionseven" style="background: #000;border: 1px solid white;color: white;padding: 1%;">Passing Marks: <b>50</b></h3>
-    <h3 class="newhthree"></h3>
-    <div class="gradeT">
-        <h1 class="grade"></h1>
-</div>
+        <div class="gradeT">
+            <h1 class="grade" style="font-size: 17px;font-weight:lighter;color: blue;"></h1>
+        </div>
     <div class="total">
+        <h3 class="conditionseven" style="background: gainsboro;border: 1px solid white;color: black;padding: 1%;">Passing Marks: <b>50</b></h3>
         <h3 class="result">Obtained Marks: 0</h3>
         <h3 class="result-total">Total Marks: <b><span>100</span></b></h3>
     </div>
+    <h3 id="number-text" style="background: gainsboro;text-align: center;font-size: 15px;font-weight: bolder;margin-bottom: -4%;margin-top: -4%;"></h3>
+
+    <ul id="out-put" style="background:gainsboro;color: black;padding: 2%;list-style: none;border: 1px solid black;font-weight: lighter;margin-bottom: -4.6%;"><b><span id="sel">Section Of Corrct Answers:</span></b> </ul>
+    <h3 class="none-T"></h3>
+    <h3 class="newhthree"></h3>
 </section>
 
 
@@ -141,7 +141,7 @@ if (storedChechArrJSON) {
         conditionNotesix.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;"> Passed</i><br><b>Note: </b>Congrats!You are  passed! ,wonderfull marwellous`
         grade.innerHTML = `Grade: <b>A++</b>`
     }
-    h3.innerHTML = `Obtained Marks: <b><span>${result.result}</span></b>`
+    h3.innerHTML = `Obtained Marks: <b>${result.result}</b>`
     console.log(result);
 
     function printSection() {

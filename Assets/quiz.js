@@ -49,8 +49,8 @@ const getQuestions = async () => {
                 ];
                 resultButton.style.display = 'none';
                 div.innerHTML += `
-                <h2 style="font-weight:lighter;color:brown">Question <b>${currentQuestionIndex} </b>of <b>${questions.length} :</b></h2>
-                <h3 style="font-weight:500;color:black"><b>Q${index + 1}</b>: ${arr[index].question.text}</h3>
+                <h2 style="font-weight:lighter;color:blue">Question <b>${currentQuestionIndex} </b>of <b>${questions.length} :</b></h2>
+                <h3 style="font-weight:300;color:black">Q${index + 1}: ${arr[index].question.text}</h3>
                 <ul>
                     ${shuffleArray(answerArr).map((items) => `
                     <card >
@@ -65,7 +65,7 @@ const getQuestions = async () => {
               
               } else {
                    console.log("question completed");
-                   div.innerHTML = `<h2 style="color:green;text-align:center;">Questions Completed</h2>`
+                   div.innerHTML = `<h2 style="color:blue;text-align:center;">Questions Completed</h2>`
                     console.log(result)
                     resultButton.style.display = 'block';
                     nextButton.style.display = 'none'            
@@ -105,12 +105,13 @@ nextButton.addEventListener("click", () => {
     const choice = document.querySelectorAll(".choice");
     div.innerHTML = "";
     let answerSelected = false; 
-
+     let percentage = 0;
     choice.forEach((item) => {
       if (item.checked) {
         answerSelected = true;
         if (item.value === questions[index].correctAnswer) {
             result += 10;
+            percentage += 10;
         // console.log(questions[index].incorrectAnswers)
         const quest = index + 1;
         const Correct =questions[index].question.text
@@ -123,6 +124,12 @@ nextButton.addEventListener("click", () => {
         localStorage.setItem('correct', chechArrJSON);
         const number = chechArr.length;
         localStorage.setItem('numberKey', number)
+        if(percentage > 50){
+          const onbjectImage = {
+            Image : src  = "./Assets/Images/images.jpeg",
+          }
+          
+        }
         
         }
       }
