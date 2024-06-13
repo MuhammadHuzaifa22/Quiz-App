@@ -21,12 +21,23 @@ color: white;
     padding-left: 2%; 
     cursor: pointer;
     background-color: #000; 
-    border: 1px solid rgba(8, 109, 224, 0.616);
+    border: 2px solid rgba(8, 109, 224, 0.616);
     margin-top: 1%;
     color: white;
 
 }
+.radio-label:hover {
+    display: inline-block;
+    position: relative;
+    padding-left: 2%; 
+    cursor: pointer;
+    background-color: chocolate; 
+    border: 2px solid black;
+    margin-top: 1%;
+    color:white;
+    font-weight: bolder;
 
+}
 
 .choice + .radio-label:before {
     content: '';
@@ -60,10 +71,9 @@ box-shadow: 1px 1px 1px 1px  blue;
 
 #h1{
     text-align: center;
-    color:white;
+    color:black;
     border-bottom: 1px solid deepskyblue;
-    background-image: url('./Images/pexels-pixabay-207178.jpg');
-    background-size: cover;
+
 }
 
 .result{
@@ -80,9 +90,8 @@ box-shadow: 1px 1px 1px 1px  blue;
 }
 .gradeT{
     border: 1px solid deepskyblue;
-    background-image: url('./Images/pngtree-abstract-light-colored-paint-texture-background-wallpaper-image_13802780.png');
-    background-size: cover;
     color: black;
+    background: brown;
     text-align: center;
 }
 .result-total{
@@ -98,28 +107,32 @@ box-shadow: 1px 1px 1px 1px  blue;
     text-align: center;
     font-weight: normal;
     background: rgba(231, 62, 62, 0.925);
+    text-align: center;
+
 }
 .conditiontwo{
-    text-align: center;
     font-weight: normal;
     background: greenyellow;
+    text-align: center;
 
 }
 .conditionthree{
-    text-align: center;
     font-weight: normal;
     background: greenyellow;;
+    text-align: center;
 
 }
 .conditionfour{
-    text-align: center;
-    font-weight: normal;
-    background: greenyellow;;
-}
-.conditionfive{
-    text-align: center;
     font-weight: normal;
     background: greenyellow;
+    text-align: center;
+
+}
+.conditionfive{
+    font-weight: normal;
+    background: greenyellow;
+    text-align: center;
+
 }
 .conditionsix{
     text-align: center;
@@ -132,7 +145,7 @@ box-shadow: 1px 1px 1px 1px  blue;
     flex-direction: row;
     justify-content: center;
     gap: 1%;
-    background-image: url('./Images/pexels-iriser-1379640.jpg');
+    background: #000;
     background-size: cover;
     color:blue;
 }
@@ -163,8 +176,7 @@ span{
     justify-content: center;
 }
 .quizNav{
-    background-image: url('../Assets/Images/pexels-lydia-bond-698937-1550618.jpg');
-    background-size: cover;
+    background: white;
 }
 .secB{
     margin :4% 4%;
@@ -196,13 +208,9 @@ border: none;
     justify-content: center;
 }
 .allcont1{
-    background-image:url('./Images/pexels-pixabay-68507.jpg');
-    background-size: cover;
+    background: #000;
 }
-.allcont{
-    background-image:url('./Images/pexels-steve-1704119.jpg');
-    background-size: cover;
-}
+
 .check-but{
     display: flex;
     justify-content: center;
@@ -225,19 +233,21 @@ border: none;
     justify-content: center;
 }
 .thro{
-border: 1px solid black;
-background-image: url('./Images/images\ \(1\).jpeg');
+background: #000;
 background-size: cover;
 color: white;
 }
 .thr{
-    border: 1px solid black;
-    background-image: url('./Images/images\ \(1\).jpeg');
+    background: #000;
     background-size: cover;
     color: white;
     }
 
-
+    nav{
+        background: white;
+        border-bottom: 1px solid black;
+        box-shadow: 1px 1px 1px 1px  black;
+    }
 .styled-list-item {
 color: blue;  
 margin-top: 2%;

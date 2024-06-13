@@ -4,21 +4,25 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url('../Assets/Images/79633109-white-texture-background-3d-rendering-design.jpg');
-    background-size:cover;
 }
 
 form{
-margin-top: 3%;
-flex-direction: column;
-border: 3px solid black;
-padding: 1%;
-border-radius: 5px;
 display: flex;
+flex-direction: column;
+flex-wrap: wrap;
 justify-content: center;
+width: 50%;
+margin: auto;
+margin-top: 3%;
+}
+form p{
+    font-size: 10px;
+    font-weight: lighter;
 }
 input{
-    font-weight: bolder;
+    font-weight: lighter;
+height: 7vh;
+width: 100%;
 
 }
 
@@ -44,11 +48,59 @@ button:hover{
 
 }
 nav{
-    background-image: url('../Assets/Images/pexels-lydia-bond-698937-1550618.jpg');
-    background-size: cover;
-    /* background-size: 100%; */
+    background: white;
+    border-bottom: 1px solid black;
+    box-shadow: 1px 1px 1px 1px  black;
 }
 
+.but_divv{
+    display: flex;flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+.but_divv button{
+    width: 45%;
+    border-radius: 5px;
+}
+#nm{
+    background:rgba(169, 169, 169, 0.103);
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+}
+#mk{
+    background:rgba(169, 169, 169, 0.103);
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+}
+
+#nm:hover{
+    background:rgba(169, 169, 169, 0.603);
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+}
+#mk:hover{
+    background:rgba(169, 169, 169, 0.603);
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+}
+
+#ml{
+    background: rgb(51, 51, 155);
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 255, 0.705);
+    border: none;
+    height: 7vh;
+    font-size: 12px;
+}
+
+#ml:hover{
+    background: rgb(32, 32, 194);
+}
 @media(max-width:694px){
     h1{
         margin-left: 5%;
@@ -59,6 +111,7 @@ nav{
 .but-div{
     margin-left: 30%;
 }
+
 
 
 
