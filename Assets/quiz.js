@@ -142,7 +142,10 @@ nextButton.addEventListener("click", () => {
         index += 1;
         showQuestions(questions);
   
+
+
+        
   });
 
-
+  
   
