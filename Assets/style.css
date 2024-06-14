@@ -1,6 +1,6 @@
 
 #jk{
-font-size: 13px;
+font-size: 17px;
 list-style: none;
 font-weight: lighter;
 color: black;
@@ -215,7 +215,6 @@ border: 1px solid green;
 }
 .allcont1{
     background:rgba(0, 0, 245, 0.705);
-    border: 5px solid whitesmoke;
 }
 
 .check-but{

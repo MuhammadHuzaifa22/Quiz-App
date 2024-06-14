@@ -11,32 +11,41 @@
 </head>
 <body class="allcont1"> 
     <p style="text-align: center;font-weight: lighter;color: black;"><b>Note: </b><span>To </span><b>print</b> this <b><span>report card</span></b> click this button<button onclick="printSection()" style="margin-left: 0.5%;"><b>Print Report Card</b></button></p>
+    <!-- Report card section started -->
     <section id="sectionToPrint">
+        <!-- Report card above section -->
         <div class="sect">
             <img src="./Assets/Images/logo-OpazD70S.png" alt="">
             <h1 id="h1">Your Report Card <i class="fa-solid fa-square-poll-horizontal" style="color: green;margin-left: 1%;"></i></h1>
         </div>
+        <!-- User email and name section in report card -->
         <div class="ho">
             <h4 class="hk"></h4>
             <h4 class="hv"></h4>
         </div>
         </div>
+        <!-- User report conditions(fail or pass) section in report card -->
         <h4 class="condition"></h4>
         <h4 class="conditiontwo"></h4>
         <h4 class="conditionthree"></h4>
     <h4 class="conditionfour"></h4>
     <h4 class="conditionfive"></h4>
     <h4 class="conditionsix"></h4>
+
+    <!-- User grade section in report card -->
         <div class="gradeT">
             <h1 class="grade" style="font-size: 17px;font-weight:lighter;color: blue;"></h1>
         </div>
+        <!-- User total marks,obtained marks and passing marks section in  report card-->
     <div class="total">
         <h3 class="conditionseven" style="background: gainsboro;border: 1px solid white;color: black;padding: 1%;">Passing Marks: <b>50</b></h3>
         <h3 class="result">Obtained Marks: 0</h3>
         <h3 class="result-total">Total Marks: <b><span>100</span></b></h3>
     </div>
+    <!-- Correct Answers Length Section in report card -->
     <h3 id="number-text" style="background: gainsboro;text-align: center;font-size: 15px;font-weight: bolder;margin-bottom: -4%;margin-top: -4%;"></h3>
 
+    <!-- Correct Questions and Answers Section in report card -->
     <ul id="out-put" style="background:gainsboro;color: black;padding: 2%;list-style: none;border: 1px solid black;font-weight: lighter;margin-bottom: -4.6%;"><b><span id="sel">Section Of Corrct Answers:</span></b> </ul>
     <h3 class="none-T"></h3>
     <h3 class="newhthree"></h3>
@@ -45,11 +54,23 @@
 
 
 <script>
+    // Calling tags from html and recieving values from local storage to get value from quiz.html.login.html.register.html,login.js,regiter.js and quiz.js result on result page
+
+    // Local storage value getting (started)
     const nonT = document.querySelector('.non-T');
     const number = Number(localStorage.getItem('numberKey'));
     const numkey = Number(localStorage.getItem('numkey'));
     const result = JSON.parse(localStorage.getItem("result"))
     const storedChechArrJSON = localStorage.getItem('correct');
+    const getArr = localStorage.getItem('users')
+    let usersArrayFromStorage = JSON.parse(getArr);
+    let email = usersArrayFromStorage[0].email;
+    const email1 = `Your Email: ${email}`;
+    let username = usersArrayFromStorage[0].username;
+    const user1 = `Your Name: ${username}`;
+    // Local storage value getting (ended)
+
+    // Calling tags from html (Section started)
     const h3 = document.querySelector('.result');
     const conditionNote = document.querySelector('.condition')
     const conditionNotetwo = document.querySelector('.conditiontwo')
@@ -61,20 +82,16 @@
     const grade = document.querySelector('.grade')
     const section  = document.querySelector('section');
     const outPut = document.getElementById('out-put');
-    const getArr = localStorage.getItem('users')
-    let usersArrayFromStorage = JSON.parse(getArr);
-    let email = usersArrayFromStorage[0].email;
-    let username = usersArrayFromStorage[0].username;
-    const email1 = `Your Email: ${email}`;
-    const user1 = `Your Name: ${username}`;
     const hk = document.querySelector('.hk');
     const hv = document.querySelector('.hv');
+    // Calling tags from html (Section started)
 
 
-
+// Checking local storage values
 console.log(numkey)
-
 console.log(storedChechArrJSON)
+
+// Showing user email and name
 numberText.innerHTML = `Correct Answers: ${number}`;
 hk.innerHTML = `${email1}`;
 if(username === null){
@@ -83,7 +100,7 @@ if(username === null){
     hv.innerHTML = `${user1}`;
 }
 
-
+// Showing correct answers length on report card
 if (storedChechArrJSON) {
 
     const storedChechArr = JSON.parse(storedChechArrJSON);
@@ -103,6 +120,7 @@ if (storedChechArrJSON) {
     console.error('No data found in local storage with key "correct".');
     outPut.innerHTML = '<ul><h2 style="text-align:center;font-size:25px;font-weight:lighter;color:black">Section Of Selected Correct Answers</h2><h3 style="text-align:center;color:red;font-size:22px"><b>No Answer is selected</b></h3></ul>'
 }
+// Showing result with conditions(fail or pass) on report card
     console.log(result.result)
     if(result.result < 20){
         conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
@@ -144,6 +162,7 @@ if (storedChechArrJSON) {
     h3.innerHTML = `Obtained Marks: <b>${result.result}</b>`
     console.log(result);
 
+// This for print button to print report card
     function printSection() {
     window.print();
 }

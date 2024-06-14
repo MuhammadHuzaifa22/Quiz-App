@@ -3,8 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-}
+
 
 form{
 display: flex;
@@ -20,13 +19,42 @@ form p{
     font-weight: lighter;
 }
 input{
+    border: 1px solid black;
     font-weight: lighter;
 height: 7vh;
 width: 100%;
 
 }
 
+@media(max-width:872px){
+form{
+    width: 40%;
+    margin-top: 5%;
+}
+input{
+    font-weight: lighter;
+height: 5vh;
+width: 100%;
+border: 1px solid black;
+margin-top: 2%;
 
+}
+}
+
+@media(max-width:488px){
+    form{
+        width: 40%;
+        margin-top: 9%;
+    }
+    input{
+        font-weight: lighter;
+    height: 5vh;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 2%;
+    
+    }
+    }
 label{
 color: black;
 font-weight: bolder;

@@ -1,3 +1,4 @@
+// Calling the email,password,username and form to get these tags value from html page to js
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const username = document.getElementById('fullName');
@@ -6,7 +7,7 @@ const form = document.querySelector('form');
 
 
 
-
+// Creating func on submit
 form.addEventListener('submit',function(event){
     event.preventDefault(); // Prevent form from submitting the traditional way
 
@@ -43,11 +44,13 @@ form.addEventListener('submit',function(event){
     localStorage.setItem('users', updatedUsersJSON);
 
     // Display a confirmation message and clear the form
-    alert('User registered successfully!');
+    alert('User' + toUnicodeVariant('registered successfully', 'bold sans', 'bold'));
     window.location = 'index.html'
+    alert('Moved to ' + toUnicodeVariant('Login Page', 'bold sans', 'bold'));
     document.getElementById('form').reset();
 });
 
+//                                      This section is for alert styling (Started)
 function toUnicodeVariant(str, variant, flags) {
     const offsets = {
         m: [0x1d670, 0x1d7f6],
@@ -162,14 +165,15 @@ for (var k of str) {
 return result
 }
 
+//                                 This section is for alert styling(Ended)
 
-
+// Making  func on login button
 function loged(){
 // alert(`Moved to login page `)
 alert('Moved to ' + toUnicodeVariant('Login Page', 'bold sans', 'bold'));
 
-
 }
+// Making  func on register button
 function reg(){
 alert('Moved to ' + toUnicodeVariant('Register Page', 'bold sans', 'bold'));
 
