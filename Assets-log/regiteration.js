@@ -44,7 +44,7 @@ form.addEventListener('submit',function(event){
     localStorage.setItem('users', updatedUsersJSON);
 
     // Display a confirmation message and clear the form
-    alert('User' + toUnicodeVariant('registered successfully', 'bold sans', 'bold'));
+    alert('User ' + toUnicodeVariant('registered successfully', 'bold sans', 'bold'));
     window.location = 'index.html'
     alert('Moved to ' + toUnicodeVariant('Login Page', 'bold sans', 'bold'));
     document.getElementById('form').reset();

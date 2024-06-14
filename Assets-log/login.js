@@ -14,11 +14,11 @@ loginform.addEventListener('submit', function(event){
     // Check if the user exists and the password matches
     let user = users.find(user => user.email === email && user.password === password);
     if (user) {
-        alert('Login' + toUnicodeVariant('Successful', 'bold sans', 'bold'));
+        alert('Login ' + toUnicodeVariant('Successful', 'bold sans', 'bold'));
         window.location.href = 'quiz.html';
         startwatch()
     } else {
-        alert('Invalid' + toUnicodeVariant('email or password', 'bold sans', 'bold'));
+        alert('Invalid ' + toUnicodeVariant('email or password', 'bold sans', 'bold'));
     }
     loginform.reset()
 });   
