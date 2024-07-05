@@ -119,7 +119,10 @@ nextButton.addEventListener("click", () => {
         // console.log(questions[index].incorrectAnswers)
         const quest = index + 1;
         const Correct =questions[index].question.text
-        chechArr.push(`Question no ${quest}: ${Correct} Answer:${item.value}.`)
+       const  questionTextBold = `Question no`
+       const answerTextBold = `Answer: `
+       answerTextBold.style.fontWeight = 'bolder'
+        chechArr.push(`${questionTextBold} ${quest}: ${Correct} ${answerTextBold}${item.value}.`)
         console.log(chechArr);
         
         console.log(Correct)
@@ -135,7 +138,7 @@ nextButton.addEventListener("click", () => {
     });
     // If user did not select an answer and click next the below if will work
     if (!answerSelected) {
-    message = 'no answer is selected';
+    message = 'No answer is selected';
     console.log(message);
     unansweredQuestions++;
     console.log(unansweredQuestions)

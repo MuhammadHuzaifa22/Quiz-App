@@ -300,23 +300,24 @@ text-align: center;
 
 
 
-
 .skill {
     width: 100px; /* Adjust as needed */
     height: 100px; /* Adjust as needed */
     position: relative;
-    margin: auto;
+    margin:auto;
+     /* Set the desired margin, 20px is just an example */
 }
 
 .outer {
-    height: 100px; /* Adjust as needed */
-    width: 100px; /* Adjust as needed */
+    height: 80px; /* Adjust as needed */
+    width: 80px; /* Adjust as needed */
     border-radius: 50%;
     box-shadow: 4px 4px 6px -1px rgba(0, 0, 0, 0.15),
                 -4px -4px 6px -1px rgba(255, 255, 255, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* Ensure proper positioning of inner elements */
 }
 
 .inner {
@@ -347,21 +348,21 @@ text-align: center;
     top: 0;
     left: 0;
     z-index: 1; /* Ensure SVG is above background */
+    width: 100%; /* Ensure SVG covers the entire inner container */
+    height: 100%;
 }
-
 circle {
     fill: none;
-    /* stroke-width: 10px;  */
-    /* Adjust as needed */
+    stroke-width: 10px; 
     stroke: url(#GradientColor);
-    stroke-dasharray: 188; /* Adjust based on circumference of new circle */
-    stroke-dashoffset: 188; /* Adjust based on desired progress */
-    /* Remove animation to keep it static */
+    stroke-dasharray: 472; /* Adjust based on circumference of new circle */
+    stroke-dashoffset: 472; /* Adjust based on desired progress */
     animation: none;
 }
 
 
-
+/* Example list item styling */
 .styled-list-item {
-    font-size: 23px; /* or any size you prefer */
+    font-size: 18px; /* or any size you prefer */
+    font-weight: bolder;
 }
