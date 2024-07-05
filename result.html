@@ -23,6 +23,42 @@
             <h4 class="hk"></h4>
             <h4 class="hv"></h4>
         </div>
+
+
+<h2 style="margin-left: 5%;">Percentage:</h2>
+
+<div class="skill">
+    <div class="outer">
+        <div class="inner">
+            <div id="number">
+                <h3 class="number">77</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+        <defs>
+           <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+           </linearGradient>
+        </defs>
+        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+</svg>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
         </div>
         <!-- User report conditions(fail or pass) section in report card -->
         <h4 class="condition"></h4>
@@ -34,7 +70,7 @@
 
     <!-- User grade section in report card -->
         <div class="gradeT">
-            <h1 class="grade" style="font-size: 17px;font-weight:lighter;color: blue;"></h1>
+            <h1 class="grade" style="font-size: 27px;font-weight:lighter;color: blue;"></h1>
         </div>
         <!-- User total marks,obtained marks and passing marks section in  report card-->
     <div class="total">
@@ -43,10 +79,10 @@
         <h3 class="result-total">Total Marks: <b><span>100</span></b></h3>
     </div>
     <!-- Correct Answers Length Section in report card -->
-    <h3 id="number-text" style="background: gainsboro;text-align: center;font-size: 15px;font-weight: bolder;margin-bottom: -4%;margin-top: -4%;"></h3>
+    <h3 id="number-text" style="background: gainsboro;text-align: center;font-size: 20px;font-weight: bolder;margin-bottom: -4%;margin-top: -4%;"></h3>
 
     <!-- Correct Questions and Answers Section in report card -->
-    <ul id="out-put" style="background:gainsboro;color: black;padding: 2%;list-style: none;border: 1px solid black;font-weight: lighter;margin-bottom: -4.6%;"><b><span id="sel">Section Of Corrct Answers:</span></b> </ul>
+    <ul id="out-put" style="background:gainsboro;color: black;padding: 2%;list-style: none;;font-weight: lighter;margin-bottom: -4.6%;font-size: 25px;"><b><span id="sel">Section Of Correct Answers:</span></b> </ul>
     <h3 class="none-T"></h3>
     <h3 class="newhthree"></h3>
 </section>
@@ -92,7 +128,7 @@ console.log(numkey)
 console.log(storedChechArrJSON)
 
 // Showing user email and name
-numberText.innerHTML = `Correct Answers: ${number}`;
+numberText.innerHTML = `Correct Selected Answers: ${number}`;
 hk.innerHTML = `${email1}`;
 if(username === null){
     hv.innerHTML = 'Your Name: null'
@@ -118,45 +154,45 @@ if (storedChechArrJSON) {
     }
 } else {
     console.error('No data found in local storage with key "correct".');
-    outPut.innerHTML = '<ul><h2 style="text-align:center;font-size:25px;font-weight:lighter;color:black">Section Of Selected Correct Answers</h2><h3 style="text-align:center;color:red;font-size:22px"><b>No Answer is selected</b></h3></ul>'
+    outPut.innerHTML = '<ul><h2 style="text-align:center;font-size:25px;font-weight:lighter;color:black">Section Of Selected Correct Answers</h2><h3 style="text-align:center;color:red;font-size:22px"><b>No Correct Answer is selected</b></h3></ul>'
 }
 // Showing result with conditions(fail or pass) on report card
     console.log(result.result)
     if(result.result < 20){
-        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;font-size:30px"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
         grade.innerHTML = `Grade: <b>No Grade</b>`
         conditionNotesix.innerHTML = `No grade because you obtained very low marks`
  
     }
    else if(result.result < 30){
-        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;font-size:30px"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
         grade.innerHTML = `Grade: <b>F</b>`
     }
     else if(result.result < 40){
-        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;font-size:30px"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
         grade.innerHTML = `Grade: <b>E</b>`
     }
     else if(result.result < 50){
-        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
+        conditionNote.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;font-size:30px"> Failed</i><br><b>Note: </b>You are  failed! ,you are eliminated from this course.`
         grade.innerHTML = `Grade: <b>D</b>`
 
     }else if(result.result < 60){
-        conditionNotetwo.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;"> Passed</i><br><b>Note: </b>You are  passed! ,but next time we are hoping you will do well`
+        conditionNotetwo.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;font-size:30px"> Passed</i><br><b>Note: </b>You are  passed! ,but next time we are hoping you will do well`
         grade.innerHTML = `Grade: <b>C</b>`
 
     }else if(result.result < 70 ){
-        conditionNotethree.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;"> Passed</i><br><b>Note: </b>Congrats!You are  passed!,but next time we want to see improveness`
+        conditionNotethree.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;font-size:30px"> Passed</i><br><b>Note: </b>Congrats!You are  passed!,but next time we want to see improveness`
         grade.innerHTML = `Grade: <b>B</b>`
     }
     else if(result.result < 80 ){
-        conditionNotefour.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;"> Passed</i><br><b>Note: </b>Congrats!You are  passed! ,welldone`
+        conditionNotefour.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;font-size:30px"> Passed</i><br><b>Note: </b>Congrats!You are  passed! ,welldone`
         grade.innerHTML = `Grade: <b>A</b>`
     }
     else if(result.result < 90 ){
-        conditionNotefive.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;"> Passed</i><br><b>Note: </b>Congrats!You are  passed! ,marwellous`
+        conditionNotefive.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;font-size:30px"> Passed</i><br><b>Note: </b>Congrats!You are  passed! ,marwellous`
         grade.innerHTML = `Grade: <b>A+</b>`
     }else if(result.result <= 100 ){
-        conditionNotesix.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;"> Passed</i><br><b>Note: </b>Congrats!You are  passed! ,wonderfull marwellous`
+        conditionNotesix.innerHTML = `<i class="fa-solid fa-check" style="font-size:25;letter-sapcing:1px;padding:1%;margin-top:1%;border:1px solid black;border-radius:50px;font-size:30px"> Passed</i><br><b>Note: </b>Congrats!You are  passed! ,wonderfull marwellous`
         grade.innerHTML = `Grade: <b>A++</b>`
     }
     h3.innerHTML = `Obtained Marks: <b>${result.result}</b>`
@@ -166,7 +202,52 @@ if (storedChechArrJSON) {
     function printSection() {
     window.print();
 }
+let numBer = document.querySelector('#number');
+let circle = document.querySelector('circle');
+let Result = { result: result.result }; // Updated result object with 23%
+numBer.innerHTML = `${Result.result}%`;
+const targetNumber = Result.result;
+
+// Calculate total circle stroke length based on radius and circumference
+const radius = circle.getAttribute('r');
+const circumference = 2 * Math.PI * radius;
+
+// Calculate dash array and offset based on target percentage
+const dashArray = `${circumference * (targetNumber / 100)} ${circumference * (1 - (targetNumber / 100))}`;
+const dashOffset = circumference * (1 - (targetNumber / 100));
+
+// Apply styles to the circle
+circle.style.strokeDasharray = dashArray;
+circle.style.strokeDashoffset = dashOffset;
+
+// Function to update progress (if animated)
+function updateProgress() {
+  counter = Math.min(counter + 1, targetNumber);
+  numBer.innerHTML = counter + '%';
+}
+
+// Uncomment to animate progress
+// let interval = setInterval(updateProgress, 20);
+
+// Check for target number on initial run as well
+updateProgress();
+
+// Uncomment to stop animation when target is reached
+// if (counter === targetNumber) {
+//   clearInterval(interval);
+// }
 </script>
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>

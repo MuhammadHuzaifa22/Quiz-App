@@ -51,12 +51,15 @@ margin-top: 1px;
 
 
 section{
-border: 1px solid green;
+/* border: 1px solid blue; */
 max-width: 400px;
 margin: auto;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background: white;
-    
+/* background: white; */
+/* border-radius: 30px; */
+background: #e0e0e0;
+box-shadow: 15px 15px 30px #bebebe,
+           -15px -15px 30px #ffffff; 
 }
 
 #h1{
@@ -69,8 +72,8 @@ background: white;
     font-size: 15px;
     margin-top: 6%;
     font-weight: lighter;
-    border-bottom: 1px solid green;
-border-top: 1px solid green;
+    /* border-bottom: 1px solid green; */
+/* border-top: 1px solid green; */
 }
 .sect {
 display: flex;
@@ -84,10 +87,12 @@ flex-direction: column;
 
 .result{
     text-align: center;
-    font-weight: lighter;
-    border: 3px solid white;
+    font-weight: bolder;
+    /* border: 3px solid white; */
     padding: 1%;
-    background: white;
+    background: gainsboro;
+    /* box-shadow: 15px 15px 30px #bebebe,
+           -15px -15px 30px #ffffff;  */
 
 }
 .conditionseven{
@@ -98,35 +103,44 @@ flex-direction: column;
     color: black;
     background: gainsboro;
     text-align: center;
-    font-size: 13px;
-    font-weight: lighter;
+    font-size: 28px;
+    
+    font-weight: bolder;
     margin-bottom: -3%;
     margin-top: -3.4%;
 }
 .result-total{
     text-align: center;
-    font-weight: lighter;
-    border: 3px solid white;
+    font-weight: bolder;
+    /* border: 3px solid white; */
     padding: 1%;
-    background: white;
-
+    background: gainsboro;
+    /* box-shadow: 15px 15px 30px #bebebe,
+    -15px -15px 30px #ffffff;  */
 }
 
 .condition{
     text-align: center;
-    font-weight: normal;
-    background: rgba(231, 62, 62, 0.925);
+    font-weight: bolder;
+    /* background: rgba(231, 62, 62, 0.925); */
+    background: red;
     text-align: center;
+    /* margin-top: 1%; */
 margin-bottom: -5.5%;
+/* box-shadow: 15px 15px 30px #bebebe,
+           -15px -15px 30px #ffffff;  */
 }
 .conditiontwo{
-    font-weight: normal;
+    font-weight: bolder;
+
     background: greenyellow;
     text-align: center;
+    
     margin-bottom: -5.5%;
 }
 .conditionthree{
-    font-weight: normal;
+    font-weight: bolder;
+
     background: greenyellow;;
     text-align: center;
 
@@ -134,21 +148,24 @@ margin-bottom: -5.5%;
 
 }
 .conditionfour{
-    font-weight: normal;
+    font-weight: bolder;
+
     background: greenyellow;
     text-align: center;
     margin-bottom: -5.5%;
 }
 .conditionfive{
-    font-weight: normal;
+    font-weight: bolder;
+
     background: greenyellow;
     text-align: center;
     margin-bottom: -5.5%;
 }
 .conditionsix{
     text-align: center;
-    font-weight: normal;
-    color: white;
+    font-weight: bolder;
+border: 1px solid black;
+    color:black;
     background: red;
     margin-bottom: -3.3%;
 }
@@ -158,15 +175,17 @@ margin-bottom: -5.5%;
     gap: 1px;
     background:darkgrey;
     color:blue;
+    /* box-shadow: 15px 15px 30px #bebebe,
+           -15px -15px 30px #ffffff;  */
 }
-span{
+/* span{
     color: deepskyblue;
-}
+} */
 #sel{
     color: black;
     margin-left:1%;
     font-weight: lighter;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 
@@ -214,7 +233,7 @@ border: 1px solid green;
     justify-content: center;
 }
 .allcont1{
-    background:rgba(0, 0, 245, 0.705);
+    background: lightblue;
 }
 
 .check-but{
@@ -249,25 +268,100 @@ background-color:greenyellow;
 text-align: center;
 }
 .ho{
-    display: flex;flex-direction: row;
-    gap: 2%;
-    justify-content: center;
-    margin-bottom: -5.2%;
-    border: 1px solid black;
-    margin-top: -3%;
+    text-align: center;
+    /* display: flex;flex-direction: column; */
+    /* gap: 2%; */
+    /* justify-content: center; */
+    /* margin-bottom: -5.2%; */
+    /* border: 1px solid black; */
+    /* margin-top: -3%; */
+    /* box-shadow: 15px 15px 30px #bebebe,
+           -15px -15px 30px #ffffff;  */
 }
 .hk{
     font-weight:600;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 1%;
+    /* box-shadow: 15px 15px 30px #bebebe,
+           -15px -15px 30px #ffffff;  */
     font-size: 20px;
     font-family: monospace;
 }
 .hv{
     font-weight: 600;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 1%;
+    /* box-shadow: 15px 15px 30px #bebebe,
+           -15px -15px 30px #ffffff;  */
     font-size: 20px;
     font-family: monospace;
 
+}
+
+
+
+
+.skill {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    position: relative;
+    margin: auto;
+}
+
+.outer {
+    height: 100px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
+    border-radius: 50%;
+    box-shadow: 4px 4px 6px -1px rgba(0, 0, 0, 0.15),
+                -4px -4px 6px -1px rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner {
+    height: 60px; /* Adjust as needed */
+    width: 60px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    box-shadow: inset 2px 2px 4px -1px rgba(0, 0, 0, 0.2),
+                inset -2px -2px 4px -1px rgba(255, 255, 255, 0.7),
+                -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                0px 6px 5px -5px rgba(0, 0, 0, 0.05);
+}
+
+#number {
+    font-weight: bolder;
+    font-size: 20px; /* Adjust as needed */
+    color: #555;
+    position: absolute;
+    z-index: 2; /* Ensure text is above SVG */
+}
+
+/* Adjustments for the SVG circle */
+.inner svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure SVG is above background */
+}
+
+circle {
+    fill: none;
+    /* stroke-width: 10px;  */
+    /* Adjust as needed */
+    stroke: url(#GradientColor);
+    stroke-dasharray: 188; /* Adjust based on circumference of new circle */
+    stroke-dashoffset: 188; /* Adjust based on desired progress */
+    /* Remove animation to keep it static */
+    animation: none;
+}
+
+
+
+.styled-list-item {
+    font-size: 23px; /* or any size you prefer */
 }
