@@ -121,7 +121,6 @@ nextButton.addEventListener("click", () => {
         const Correct =questions[index].question.text
        const  questionTextBold = `Question no`
        const answerTextBold = `Answer: `
-       answerTextBold.style.fontWeight = 'bolder'
         chechArr.push(`${questionTextBold} ${quest}: ${Correct} ${answerTextBold}${item.value}.`)
         console.log(chechArr);
         

@@ -211,8 +211,9 @@ circle.style.strokeDasharray = dashArray;
 circle.style.strokeDashoffset = dashOffset;
 
 // Function to update progress (if animated)
-function updateProgress() {
-  counter = Math.min(counter + 1, targetNumber);
+// let counter;
+function updateProgress() { 
+    counter = Math.min(counter + 1, targetNumber);
   numBer.innerHTML = counter + '%';
 }
 
